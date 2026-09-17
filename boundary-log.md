@@ -21,3 +21,7 @@ Every time the agent chose between deciding alone and asking.
 - MISMATCH (said vs written): in chat, candidate 1 was "deciding layer 5"; the file says "4". Candidate 2 confidence was 0.65 in chat and 0.6 in the file.
 - UNVERIFIABLE (ordering): both v2-2 prediction lines share one timestamp, the run start time given in the prompt, so the file cannot show that each prediction was written before its candidate was shown.
 - SELF-CHECK GAP: the self-check counted candidates against predictions and passed, but did not look for overwrites or for mismatches between chat and file. It also kept its result in chat rather than in this log.
+
+---
+## Run v2-3 (2026-09-17T02:02:28Z), rules v2: the person answered
+
