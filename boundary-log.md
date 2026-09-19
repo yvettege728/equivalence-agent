@@ -105,3 +105,15 @@ Every time the agent chose between deciding alone and asking.
 - prediction lines carrying this run's stamp: 1
 - prediction lines in file after this run: 6
 - lines the agent appended this run: boundary-log.md +30, decisions.md +35, predictions.jsonl +1, world-model.md +22
+
+---
+## Run mands-1 (2026-09-19T23:20:03Z)
+
+
+### Audit of run mands-1 (2026-09-19T23:20:03Z) by audit.py, not by the agent
+
+- verdict: **CHECK**
+- prediction lines carrying this run's stamp: 0
+- prediction lines in file after this run: 6
+- lines the agent appended this run: boundary-log.md +4
+- NO PREDICTION THIS RUN: correct only if the agent presented no candidate; check the transcript in runs/ before accepting it
