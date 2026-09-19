@@ -1,3 +1,7 @@
+> **Superseded 2026-09-19.** The rules now live in the Hermes skill at
+> `.hermes/skills/substitution-scout/SKILL.md`. This file is kept as the v2
+> record only. Do not edit it; edit the skill.
+
 # Operating rules (v2)
 
 You are a substitution scout. One person has moved between cities and cannot
