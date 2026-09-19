@@ -11,12 +11,30 @@ import json, subprocess, sys
 from pathlib import Path
 
 RECORDS = ["predictions.jsonl", "decisions.md", "world-model.md", "boundary-log.md"]
-REQUIRED = {"ts", "item", "candidate", "predict", "confidence", "deciding_layer", "why"}
+REQUIRED = {"ts", "item", "candidate", "predict", "confidence", "deciding_layer",
+            "ritual_layer", "why"}
 
 
 def deleted_lines(path):
-    d = subprocess.run(["git", "diff", "-U0", "--", path], capture_output=True, text=True).stdout
-    return [l for l in d.splitlines() if l.startswith("-") and not l.startswith("---") and l[1:].strip()]
+    """Lines of content that were present before this run and are gone now.
+
+    Compares content, not diff hunks. Reflowing whitespace around a line makes
+    git show it as removed and re-added; that is not destruction, so counting
+    raw diff minus-lines produces false alarms.
+    """
+    before = subprocess.run(["git", "show", f"HEAD:{path}"], capture_output=True, text=True)
+    if before.returncode != 0:
+        return []
+    old = [l.strip() for l in before.stdout.splitlines() if l.strip()]
+    now = [l.strip() for l in Path(path).read_text().splitlines() if l.strip()]
+    remaining = list(now)
+    gone = []
+    for line in old:
+        if line in remaining:
+            remaining.remove(line)
+        else:
+            gone.append("-" + line)
+    return gone
 
 
 def main(label, stamp):
