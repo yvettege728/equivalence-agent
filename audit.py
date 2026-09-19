@@ -41,11 +41,22 @@ def main(label, stamp):
         missing = REQUIRED - set(p)
         if missing:
             findings.append(f"MISSING FIELDS on line {i}: {', '.join(sorted(missing))}")
-    verdict = "CLEAN" if not findings else "VIOLATIONS"
+    written = {}
+    for line in subprocess.run(["git", "diff", "--numstat"], capture_output=True, text=True).stdout.splitlines():
+        parts = line.split("\t")
+        if len(parts) == 3 and parts[2] in RECORDS + ["profile.md", "persona.md"]:
+            written[parts[2]] = parts[0]
+    if not written:
+        findings.append("NO RECORD WRITTEN: the run left every record file untouched")
+    if not this_run:
+        findings.append("NO PREDICTION THIS RUN: correct only if the agent presented no candidate; "
+                        "check the transcript in runs/ before accepting it")
+    verdict = "CLEAN" if not findings else "CHECK"
     lines = [f"\n### Audit of run {label} ({stamp}) by audit.py, not by the agent\n",
              f"- verdict: **{verdict}**",
              f"- prediction lines carrying this run's stamp: {len(this_run)}",
-             f"- prediction lines in file after this run: {len(new)}"]
+             f"- prediction lines in file after this run: {len(new)}",
+             "- lines the agent appended this run: " + (", ".join(f"{k} +{v}" for k, v in written.items()) or "none")]
     lines += [f"- {f}" for f in findings]
     Path("boundary-log.md").open("a").write("\n".join(lines) + "\n")
     print("\n".join(lines))
