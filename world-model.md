@@ -56,3 +56,13 @@ Each line: hypothesis, evidence, status (open / supported / retired).
 **Evidence:** fage-2 answer (use ritual) vs v2-3 answer (channel/social ritual) — same person, two different ritual attachments to two different items.
 
 **Status:** revision of Hypothesis 2, supported by one contrastive pair. The revision narrows Hypothesis 2 rather than overturning it.
+
+---
+
+## Note from mands-2 (2026-09-19T23:25:12Z)
+
+**Carrying Hypothesis 4's test case forward.** The M&S pistachio cookies remain the unresolved test case for Hypothesis 4 (two kinds of ritual: channel/social vs use ritual). The ritual layer for this item is evidence-established as channel/social (from the person's v2-3 answer + the Fage contrast). The use-ritual question — whether the cookie itself anchors a consumption routine — was asked in mands-1 and remains unanswered. Until the person answers, Hypothesis 4's prediction about the M&S cookies cannot be fully tested: if the person confirms no use ritual, the channel/social layer is the sole ritual and the practice proposal is the right frame; if the person confirms a use ritual exists, the import gains a partial-bridge role and the assessment shifts.
+
+**No hypothesis change this run.** The evidence established in mands-1 (channel/social ritual for M&S) is unchanged; the use-ritual question is still open. The run's contribution is writing the record to disk (predictions.jsonl, decisions.md, world-model.md, boundary-log.md) for the first time for this item's ritual-layer establishment — mands-1 established the layer in reasoning but wrote nothing to disk; mands-2 repeats the establishment with actual writes.
+
+**Hypothesis 4 status:** active, still needs the M&S use-ritual answer to fully test its prediction on this item. One contrastive pair (Fage vs M&S) supports it; the M&S use-ritual answer would be the second data point that closes the test case.

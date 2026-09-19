@@ -79,3 +79,68 @@ Under layer 4 (Relational):
 ```
 
 Under open items, mark "Fage Total 5% yogurt (London, everyday)" as resolved, with the caveat above about US-UK formulation match still to be confirmed by the person's own taste.
+
+---
+
+## Run mands-2 (2026-09-19T23:25:12Z) — M&S pistachio cookies (re-run; ritual layer already established)
+
+**Item:** M&S pistachio cookies (still two unconfirmed sub-species: the 8 All Butter Pistachio & Almond Cookies 200g is the one most easily importable; the in-store bakery filled cookie is not importable and remains unidentified).
+
+**Ritual layer — established before candidates (carried from mands-1, evidence-supported):**
+
+The ritual layer in play for the M&S pistachio cookies is the channel/social ritual (layer 5 as practice), not a use ritual. Evidence:
+- The person's v2-3 answer named three objects of loss: the cookie itself (material), the in-store browsing after class as stress relief (channel ritual), and the M&S new-product discovery + share-with-friends loop (social/discovery ritual).
+- The person compared M&S's new-product rhythm to Trader Joe's.
+- The person has NOT said anything of the form "I eat this cookie in a particular routine" — contrast with Fage (fage-2), where the person explicitly volunteered that the daily use (morning yogurt bowl) became a ritual. When this person has a use ritual, they name it. The M&S cookie answer contains no such naming.
+- Profile.md layer 4 frames the M&S attachment as ecosystem-bound (stated by the person, 2026-09-16) — about encounter, not consumption.
+- World-model Hypothesis 4 (formed from the Fage vs M&S contrast in fage-2) flags exactly this distinction: the M&S case is a channel/social ritual; the Fage case is a use ritual. The M&S cookie's use-ritual status is the unresolved test case for Hypothesis 4.
+
+**Open question carried from mands-1 (still not answered by the person):**
+> "For the M&S pistachio cookies specifically — separate from the browsing/discovery/share thing you already described — did the cookie itself live inside any routine for you? Something like: a particular time of day, a particular way of eating it, a regular occasion that the cookie anchored? Or was the only ritual around it the supermarket-browsing and new-product-sharing one?"
+
+This question was asked in mands-1 and the person has not answered it. It remains open. The deciding layer for both candidates is 5, and profile.md still marks the use-ritual dimension unknown for this item. Under RULES v2, I should ask — but the question was already asked in mands-1 and the person hasn't answered; re-asking verbatim would be redundant. I am logging it as still open and offering it again, rather than assuming the answer.
+
+**Decide-vs-ask for this run:**
+- DECIDED ALONE to proceed with two candidates and write predictions first, rather than asking again before proposing. Reason: the ritual layer (channel/social) is already evidence-established from the person's own v2-3 answer and the Fage contrast; the use-ritual question is a refinement that was already asked in mands-1 and remains unanswered. Re-asking would be redundant. The candidates are presented with the use-ritual answer flagged as the open item that could shift the assessment — specifically, if the person confirms a use ritual exists, the import's partial-bridge role strengthens and the practice proposal's layer-1/2 breakage becomes more costly. I am not assuming either answer.
+
+**Candidate 1 — M&S 8 All Butter Pistachio & Almond Cookies 200g via Britsuperstore / British Corner Shop import to Boston (the identical product; the only importable of the two unconfirmed sub-species; the in-store bakery filled cookie is not importable and remains unidentified).**
+- Prediction line: predictions.jsonl line 7 (ts 2026-09-19T23:25:12Z, predict=reject, deciding_layer=5, confidence=0.6).
+- Verdict: **reject as a complete answer; may still be a partial bridge for the cookie-only loss pending the use-ritual answer.**
+- Reason: the established ritual layer is channel/social (browsing/discovery/share), which the import cannot restore. Layers 1-4 are preserved (identical cookie, identical packaging, same M&S brand, price band negotiable). Layer 5 is the established binding layer and the import leaves it unaddressed. Predicting reject as a complete answer.
+- Layers preserved: 1 (identical cookie, pending sub-species confirmation), 2 (identical packaging/sign), 3 (price band negotiable; import is pricier per unit but within reason), 4 (same M&S brand; brand is negotiable by default and the person's ecosystem attachment is to the practice side, not only the label).
+- Layers broken: 5 (the channel and the ritual are not restored by mail-order import).
+- Unknown: (a) which of the two M&S pistachio cookies is meant — if the binding one is the in-store bakery filled cookie, layer-1 match drops from identical to unconfirmed; (b) whether the person confirms a use ritual exists — if yes, the import's partial-bridge role strengthens; if no, the import is even more clearly incomplete.
+- Caveat: this is the same physical product as v2-2 candidate 1 and v2-3 candidate B, reassessed in the context of the already-established ritual layer. Not a new product; a re-presentation with updated assessment.
+
+**Candidate 2 — no_purchase on the cookie as primary object; practice reconstruction.**
+- Prediction line: predictions.jsonl line 8 (ts 2026-09-19T23:25:12Z, predict=accept, deciding_layer=5, confidence=0.65).
+- Verdict: **accept as the frame for this run** — the primary recommendation is not a cookie but a practice reconstruction.
+- Reason: the established ritual layer is channel/social, which is a layer-5 object (order and trust: what brings order back). The person's own v2-3 answer named the practice, not only the product, as something lost. Rules v2 §"Do not buy is a valid answer" applies when evidence suggests what was lost is a practice.
+- Layers preserved: 5 (directly, if the person takes up the practice); 4 partially (the discovery-and-share loop can be reconstructed with friends around a different grocer).
+- Layers broken: 1 and 2 (the specific M&S cookie and its packaging are not replaced by a practice — the cookie itself remains lost, at least for now).
+- Unknown: whether Trader Joe's or a similar discovery-oriented Boston grocer is actually walkable in the person's routine and within their price band — a layer-3 check I have not done and am not doing blind; the person's own access knowledge is the judgment device here.
+- The person's own comparator (Trader Joe's, from v2-3) is the named analog; whether it is accessible is the layer-3 check.
+
+**Which layer actually decided it:** layer 5 in both cases. The established ritual layer is channel/social; the import cannot restore it (candidate 1 rejected as complete answer); the practice proposal addresses it directly (candidate 2 accepted as the frame).
+
+**No_purchase:** Candidate 2 is a no_purchase on the cookie as the primary object, with a practice proposal instead. This is the run's primary recommendation.
+
+**Open items carried forward (not resolved this run):**
+- Which of the two M&S pistachio cookies is meant (still unknown since v2-3).
+- Whether the cookie itself has a use ritual (asked in mands-1, not answered).
+- Whether Trader Joe's or equivalent is walkable in the person's Boston routine (layer-3 check, not done).
+- Whether the person wants the import as a partial bridge for the cookie-only loss while separately reconstructing the practice (not asked).
+
+**Profile.md edits I would propose (not made):**
+Under layer 5 (Order and trust):
+```
+- M&S pistachio cookies: the ritual in play is channel/social (browsing after
+  class, new-product discovery, share-with-friends), established from the
+  person's v2-3 answer and carried through fage-2's Hypothesis 4 contrast.
+  The use-ritual question (whether the cookie itself anchors a consumption
+  routine) is still open — asked in mands-1, not answered. Layer 5 is the
+  established binding layer for this item; a product-only substitute is an
+  incomplete answer. Stated by the person, 2026-09-16 (v2-3); ritual layer
+  established 2026-09-19 (mands-1/mands-2).
+```
+Under open items, re-state the two-cookie ambiguity and the use-ritual question as still open.
