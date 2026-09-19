@@ -66,3 +66,21 @@ Each line: hypothesis, evidence, status (open / supported / retired).
 **No hypothesis change this run.** The evidence established in mands-1 (channel/social ritual for M&S) is unchanged; the use-ritual question is still open. The run's contribution is writing the record to disk (predictions.jsonl, decisions.md, world-model.md, boundary-log.md) for the first time for this item's ritual-layer establishment — mands-1 established the layer in reasoning but wrote nothing to disk; mands-2 repeats the establishment with actual writes.
 
 **Hypothesis 4 status:** active, still needs the M&S use-ritual answer to fully test its prediction on this item. One contrastive pair (Fage vs M&S) supports it; the M&S use-ritual answer would be the second data point that closes the test case.
+
+---
+
+## Note from vision-1 (2026-09-19T23:51:08Z)
+
+**What this run did:** vision test on the granola image pair. Read both images, stated what was and was not legible, classified the mechanism against CASES.md's three mechanisms, did not propose a purchase.
+
+**Read result:**
+- granola_uk.avif: NOT readable. Vision tool returned "source is not a recognized image." The .avif format is not supported by the vision tool as configured. No visual read on the London granola. Identity of the lost item rests on CASES.md text ("a regular granola"), not on vision.
+- granola_us.jpg: readable. Whole Foods bulk dispenser wall. Four Cranberry Gourmet Granola jars (PLU# 7051, $5.99/lb), one Oil Free Gourmet Granola (PLU# 7050, $5.99/lb), two Ginger Pecan Gourmet Granola (PLU# 6081, $5.99/lb), plus top-tier USDA Organic dispensers whose contents could not be identified, a weighing bowl on a scale arm, a "Food Allergy Concerns" sign, and a sample-bag station. Ingredient lists and detailed nutrition facts are too small/blurry to read. Far-right jar and bottom of chutes are cut off by the frame.
+
+**Mechanism classified:** Self-assembly (case 2 in CASES.md). The US image is the Whole Foods bulk dispenser wall where the person mixes her own granola. CASES.md records this case as: "Chosen substitute: mixing her own at the Whole Foods bulk dispensers. Ritual layer: use, of the periodic kind, plus a new element of composition. What was preserved: the material result, roughly. What was added: authorship." The visible venue matches the recorded substitute exactly.
+
+**Small hypothesis recorded (untested):** For the self-assembly mechanism, the readable surface of a bulk-dispenser photo — product name, PLU, price — is more available than the ingredient-level detail that the composition decision actually requires. If an agent were to assist composition rather than merely classify, a photo of the bins would not be sufficient; it would need the bin labels or ingredients data, and the person's own taste preferences over components. This run did not test that, because it did not propose a composition. Recorded as a limit on what vision can carry for this mechanism, not as a claim about the person.
+
+**Tooling limitation recorded:** the .avif format could not be read by vision_analyze in this environment. If the UK granola image is needed again, convert it to jpg/png first or use a different path. This is a tooling note, not a world-model claim about the person.
+
+**No hypothesis changed about the person this run.** The granola case is ground truth (CASES.md), not new evidence. The run's contribution is confirming that the mechanism classification holds under actual image inspection, and recording the readability asymmetry and the avif limitation for later runs that may need to go deeper than classification.
