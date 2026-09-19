@@ -44,3 +44,38 @@ Layer that actually decided (so far): layer 1 (material) and layer 2 (sign) are 
 **Which layer actually decided it:** layer 5 in both cases. The person's answer turned layer 5 from an unknown into the active binding question. Candidate A is accepted as the frame because the loss is partly a practice; candidate B is rejected as a complete answer because it cannot restore the practice, though it may still be a partial bridge for the material loss.
 
 **Note on the two-cookie ambiguity:** the person still did not say which M&S pistachio cookie they meant. Treated as still unknown. If the binding cookie is the one not easily importable, the import candidate's layer-1 match drops from "identical" to "unconfirmed," which would further weaken it. No decision changed on that basis yet — logged as still open.
+
+---
+
+## Run fage-2 (2026-09-19T23:00:13Z) — Fage Total 5% yogurt
+
+**Item:** Fage Total 5% yogurt (London everyday item).
+
+**Person's stated reason (quoted):** "日常必需品，对某一个产品有 loyalty 后体验更多是顺手就拿 但日常使用这个产品（早上制作酸奶碗）变成了仪式" — "An everyday staple. Once I have loyalty to a particular product, the experience is mostly grabbing it without thinking. But the daily use of this product, making a yogurt bowl in the morning, became a ritual."
+
+**What this answer did:** it resolved layer 5 for this item. Unlike the M&S pistachio cookies (where the ritual was browsing/discovery/share, tied to the channel), here the ritual is a use ritual tied to the product itself — making a yogurt bowl every morning. The autopilot grab (layers 1–4) is intact as long as the product is on the shelf. Layer 5 is not a browsing ritual; it is a morning routine that transfers with the product.
+
+**Candidate — Fage Total 5% yogurt as sold in Boston (Whole Foods, Walmart, other grocers):**
+- Verdict: **accept** (subject to the one caveat below).
+- Reason: Fage Total 5% is sold in the US under the same brand name, same product line ("Total"), same formulation topology (pasteurised skimmed milk + cream + live cultures including L. Bulgaricus, S. Thermophilus, L. Acidophilus, Bifidus, L. Casei), same "thick and creamy" positioning. The person's loyalty is to the product/brand, which survives the move. The morning yogurt-bowl ritual is a use ritual preserved by the same product being available. Layer 4 (brand loyalty → autopilot) is the binding layer; the same brand on the shelf preserves it. Layer 5 is resolved: the ritual is about using the product, not about where it's bought, and the product is available in Boston.
+- Deciding layer: **4** (brand loyalty → autopilot). Layer 5 is also satisfied because the use ritual transfers with the product.
+- Layers preserved: 1 (same material/formulation topology — caveat on exact nutritional match below), 2 (same Fage Total branding and packaging sign), 3 (price band negotiable; US price retrieved earlier: ~$6.96–$7.79 for 32oz tub, within reason per profile.md), 4 (same Fage brand — the person named the brand, implying brand is the object), 5 (morning yogurt-bowl ritual preserved by the same product).
+- Layers unknown / caveat: the exact US formulation vs UK formulation nutritional numbers are not identical (US 140kcal/5.3oz cup vs UK 93kcal/100g), and the person did not say whether this difference matters to the morning ritual. This is a layer-1 detail. The person said the grab is autopilot once loyalty is established, which suggests the brand/product identity is what matters, but if the person tastes the difference and it breaks the autopilot, that would be a layer-1 failure. Not yet verified by the person tasting the US product.
+
+**No_purchase:** not needed. The product is available in Boston under the same name.
+
+**Which layer actually decided it:** layer 4 (brand loyalty and autopilot) is the binding layer; the person's answer shows this is a staple with loyalty, not a browsing ritual. Layer 5 is resolved in the same direction — the ritual is about using the product, not about the channel.
+
+**Open item retired:** the profile.md open item "Fage Total 5% yogurt (London, everyday)" — the person's answer closed it at layer 5. The item is now understood as: everyday staple, brand loyalty, autopilot grab, morning yogurt-bowl use ritual. The remaining unknown is the exact US-UK formulation match (layer 1 detail), which the person can confirm by tasting.
+
+**Profile.md edits I would propose (not made):**
+
+Under layer 4 (Relational):
+```
+- Fage Total 5%: brand loyalty, everyday staple, autopilot grab once loyalty established.
+  The ritual is a use ritual (morning yogurt bowl), not a browsing ritual.
+  Layer 5 is resolved in the direction of "the product carries the ritual."
+  Stated by the person, 2026-09-19 (run fage-2).
+```
+
+Under open items, mark "Fage Total 5% yogurt (London, everyday)" as resolved, with the caveat above about US-UK formulation match still to be confirmed by the person's own taste.
