@@ -10,7 +10,7 @@ D="$PWD"
 git add -A && git -c user.name="Yvette Ge" -c user.email="yvette_ge@gsd.harvard.edu" \
   commit -q -m "before run $LABEL" --allow-empty
 printf '\n---\n## Run %s (%s)\n\n' "$LABEL" "$STAMP" >> boundary-log.md
-hermes --in "$D" -t web,file,skills -z "Current time: $STAMP. Run label: $LABEL. Use the substitution-scout skill; it holds the rules. The workspace is $D and all its files are there. $TASK" \
+hermes --in "$D" -t web,file,skills,vision -z "Current time: $STAMP. Run label: $LABEL. Use the substitution-scout skill; it holds the rules. The workspace is $D and all its files are there. $TASK" \
   2>&1 | tee "runs/$LABEL.md"
 python3 audit.py "$LABEL" "$STAMP" || echo "AUDIT FOUND VIOLATIONS (recorded, not fatal)"
 git add -A && git -c user.name="Yvette Ge" -c user.email="yvette_ge@gsd.harvard.edu" \
