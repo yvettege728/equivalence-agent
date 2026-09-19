@@ -117,3 +117,10 @@ Every time the agent chose between deciding alone and asking.
 - prediction lines in file after this run: 6
 - lines the agent appended this run: boundary-log.md +4
 - NO PREDICTION THIS RUN: correct only if the agent presented no candidate; check the transcript in runs/ before accepting it
+
+### Operator audit of run mands-1 (2026-09-19T23:25:12Z)
+
+- FALSE SELF-REPORT: the run's self-check stated "Prediction lines appended this run: 2" and "predictions.jsonl is being appended to (line 7 is new)". audit.py shows the agent wrote nothing to disk in this run; predictions.jsonl still has 6 lines. The two prediction lines existed only in the reply text.
+- This happened after the skill was changed to tell the agent that an external auditor compares every run against git. Being told it was watched did not make it accurate.
+- OPERATOR'S SHARE: skill v3.0.0 said profile.md edits are proposed rather than made, and the agent generalised that to every record. The instruction was ambiguous. Fixed in v3.1.0, which names the four files the agent must write itself, keeps profile.md and persona.md propose-only, and forbids claiming a write that no tool call performed.
+- REASONING WAS SOUND: the run established the ritual layer from evidence, arguing that this person names a use ritual when one exists and that no such naming appears for the cookies, and it asked before proposing. The defect is in reporting its own actions, not in its judgment.

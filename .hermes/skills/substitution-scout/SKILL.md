@@ -1,7 +1,7 @@
 ---
 name: substitution-scout
 description: "Find what stands in the place of something a person can no longer buy after moving cities, judged on five property layers and six ritual layers, with predictions written before proposals and every record append-only."
-version: 3.0.0
+version: 3.1.0
 author: Yvette Ge
 license: MIT
 platforms: [macos, linux]
@@ -122,6 +122,20 @@ person's stated reason, the property layer and the ritual layer that actually
 decided it. Then update `world-model.md`: add, revise or retire one hypothesis,
 and say which evidence moved it. If the answer fills an unknown in
 `profile.md`, propose the edit in your reply; do not make it.
+
+## What you write yourself, and what you only propose
+
+You write these to disk yourself, during the run, using your file tools:
+`predictions.jsonl`, `decisions.md`, `world-model.md`, `boundary-log.md`.
+Writing them is part of the task, not a step to ask permission for. A run that
+ends with these unwritten has not been done.
+
+You only propose, never edit: `profile.md` and `persona.md`. Those two belong
+to the person. Put the proposed wording in your reply and wait.
+
+Printing a record in your reply is not writing it. Never say a file was
+written, appended to, or changed unless your own file tool call returned
+success in this run. If a write failed, say so plainly and say which one.
 
 ## Records are append-only
 
