@@ -39,6 +39,8 @@ Each line: hypothesis, evidence, status (open / supported / retired).
 
 ## Hypothesis 4 (original wording, from fage-2; restored from git after dash-1 deleted it)
 
+### Hypothesis 4 (new, from fage-2 answer — two kinds of ritual)
+
 > Kept verbatim. dash-1 rewrote this hypothesis in place instead of appending a revision,
 > and audit.py reported the deletion. The revision it wrote follows below.
 
