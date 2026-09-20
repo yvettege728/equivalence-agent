@@ -139,3 +139,8 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - lines the agent appended this run: boundary-log.md +41, decisions.md +44, world-model.md +21
 - APPEND-ONLY VIOLATED in world-model.md: 5 earlier line(s) removed or rewritten. First: ## Hypothesis 4 (new, from fage-2 answer — two kinds of ritual)
 - NO PREDICTION THIS RUN: correct only if the agent presented no candidate; check the transcript in runs/ before accepting it
+
+### Operator note on run dash-1 (2026-09-20T00:39:55Z)
+
+- RECORD DESTROYED: dash-1 deleted Hypothesis 4 (five lines) while writing its revision, the same hypothesis this run's answer confirms. audit.py reported it. The original wording is restored above the revision, both kept.
+- The rest of the run followed the rules: boundary-log and decisions were appended, nothing else was lost, and no audit block was forged.

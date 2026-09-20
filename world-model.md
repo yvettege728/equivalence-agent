@@ -37,6 +37,23 @@ Each line: hypothesis, evidence, status (open / supported / retired).
 
 ---
 
+## Hypothesis 4 (original wording, from fage-2; restored from git after dash-1 deleted it)
+
+> Kept verbatim. dash-1 rewrote this hypothesis in place instead of appending a revision,
+> and audit.py reported the deletion. The revision it wrote follows below.
+
+**Hypothesis:** the same person can have two structurally different kinds of "ritual" attached to different grocery items. One is a channel-and-social ritual (browsing, discovery, sharing — tied to where and how the item is encountered), which layer 5 makes primary when it is what was lost. The other is a use ritual (making a yogurt bowl every morning — tied to what the item is and how it is used), which is carried by the product itself and resolves when the same product is available, even if the channel is different. When the ritual is a use ritual, layer 5 does not push toward no_purchase; it pushes toward finding the same product, and the autopilot/staple dynamic (layer 4) is what carries the substitution.
+
+**Evidence:** the person's fage-2 answer explicitly contrasts with the M&S answer. For M&S pistachio cookies, the loss included the browsing/discovery/share ritual (channel-based). For Fage Total 5% yogurt, the person said: everyday staple, loyalty → autopilot grab, but the daily use (morning yogurt bowl) became a ritual. The ritual is about using the product, not about where it is bought. The product is sold in the US under the same name. This is a different ritual topology from the M&S case.
+
+**Prediction this hypothesis makes:** for future items, the first question should be "what kind of ritual is attached to this, if any — is it a use ritual (carried by the product) or a channel/social ritual (not carried by the product)?" If it is a use ritual, the same product on the shelf resolves layer 5 and the binding layer is likely 4 (brand/category loyalty). If it is a channel/social ritual, layer 5 may be the binding layer and a product-only substitute is an incomplete answer. This distinction should be tested on the next open item (M&S pistachio cookies, which remains ambiguous — the person named the browsing ritual for M&S but did not say whether the cookie itself is a use ritual too).
+
+**Status:** active, formed from a single contrastive answer (Fage vs M&S). Needs more items to confirm the pattern.
+
+---
+
+---
+
 ## Hypothesis 4 (revised, from fage-2 + dash-1 — two kinds of ritual, possibly on the same item)
 
 **Hypothesis:** the same person can have two structurally different kinds of "ritual" attached to grocery items — and they can attach to the same item, not only to different items. One is a channel-and-social ritual (browsing, discovery, sharing — tied to where and how the item is encountered), which layer 5 makes primary when it is what was lost. The other is a use ritual (tied to what the item is and how it is used), which is carried by the product itself and resolves when the same product is available, even if the channel is different. Use rituals subdivide into at least two kinds: routine-use (daily, anchored — e.g. Fage morning yogurt bowl) and reward-use (occasion-triggered — e.g. M&S pistachio cookie when tired or after a deadline). When the ritual is a use ritual, layer 5 does not push toward no_purchase; it pushes toward finding the same product (routine-use) or a product that serves the same reward function (reward-use, where material and sign similarity are almost irrelevant — CASES.md case 1). When the ritual is a channel/social ritual, layer 5 may be the binding layer and a product-only substitute is an incomplete answer.
