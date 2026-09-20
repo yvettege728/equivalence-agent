@@ -144,3 +144,15 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 
 - RECORD DESTROYED: dash-1 deleted Hypothesis 4 (five lines) while writing its revision, the same hypothesis this run's answer confirms. audit.py reported it. The original wording is restored above the revision, both kept.
 - The rest of the run followed the rules: boundary-log and decisions were appended, nothing else was lost, and no audit block was forged.
+
+---
+## Run bark-baseline (2026-09-20T01:40:05Z)
+
+
+### Audit of run bark-baseline (2026-09-20T01:40:05Z) by audit.py, not by the agent
+
+- verdict: **CHECK**
+- prediction lines carrying this run's stamp: 0
+- prediction lines in file after this run: 8
+- lines the agent appended this run: boundary-log.md +4, decisions.md +30
+- NO PREDICTION THIS RUN: correct only if the agent presented no candidate; check the transcript in runs/ before accepting it

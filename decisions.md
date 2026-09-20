@@ -188,3 +188,33 @@ Under open items, re-state the two-cookie ambiguity and the use-ritual question 
 ## Run vision-2 (2026-09-20T00:07:41Z) — M&S pistachio cookie + TJ's bark image pair (no proposal)
 
 (This entry preceded dash-1 in the file; preserved as-is.)
+
+## Run bark-baseline (2026-09-20T01:40:05Z) — weekly bark-watch baseline entry
+
+**Item:** Trader Joe's Dark Chocolate Bark with puffed quinoa and dried raspberries (SKU 078299).
+
+**Findings (live run, just now):**
+
+- The product page exists at traderjoes.com/home/products/pdp/dark-chocolate-bark-078299 and identifies the product by name, ingredients, and SKU. Judgment device: appellation (the product's own page).
+- Independent reviewers describe it as a seasonal Valentine's item, sold in a pink bag, at approximately $5.49 for 10 oz. Judgment device: guide (independent reviewers describing the product and its seasonal framing).
+- Walmart lists an 8 oz SKU for resale. Judgment device: confluence (a third-party store listing).
+- Per-store availability for Cambridge and Boston could not be determined. Trader Joe's does not publish store-level inventory, and the product page is JavaScript-rendered and could not be read in this session. Judgment device: confluence failure (the store's own channel did not yield the needed signal).
+
+**Why this is the baseline:** This item is the chosen substitute for the M&S pistachio cookie on the reward-use dimension (established in vision-2 and confirmed by the person's mands-3 answer — the cookie is a reward-treat, triggered by tiredness or finishing a deadline, not a daily routine). The bark-watch is the recurring check that tracks whether the substitute is actually obtainable when the reward-use occasion arises.
+
+**Risk noted:** This item is the chosen substitute for a reward-use ritual. If it is seasonal (as the guide evidence suggests — Valentine's item), then the same ritual can break a second time, at the acquisition layer: when the person reaches for the reward-treat on a tired/deadline-completion occasion and the product is not on the shelf because the seasonal window has closed. The loss is not only "can I get it once" but "can I get it when I need it, repeatedly." A seasonal substitute for a reward-use ritual converts a one-time substitution into a recurring acquisition failure.
+
+**Property layer at risk:** Layer 1 (Material) — the product's material existence is not continuous; its availability is bounded by a seasonal window, so the very thing being substituted can vanish from the market for part of the year.
+
+**Ritual layer at risk:** Layer 2 (Acquisition) — the step of actually obtaining the substitute when the reward-use occasion triggers. If the product is seasonal and the person's occasions are not, there will be occasions when the product is wanted and not available.
+
+**What the baseline establishes for the weekly watch:** Each weekly bark-watch must answer, at minimum: (1) is this SKU currently on the shelf at a walkable Cambridge or Boston Trader Joe's; (2) is it inside or outside its seasonal window; (3) at what price and package size. Store-level inventory cannot be read from TJ's own channel (confluence failure recorded above), so each watch must use a judgment device that can actually signal per-store presence — e.g., a person who shops at the relevant store, or a store-level listing from a source that carries it. The product page and third-party listings are not sufficient for the weekly question.
+
+**Candidates presented this run:** 0 (no substitution candidate — this run establishes the baseline record for the weekly watch, not a new candidate).
+
+**Prediction lines written this run:** 0 (no candidate presented; predictions live with candidates).
+
+**Count match:** 0 = 0. No RULE VIOLATION on the candidate/prediction count axis.
+
+---
+
