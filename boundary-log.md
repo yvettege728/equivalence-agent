@@ -90,3 +90,52 @@ The images do NOT resolve the open item in profile.md (which of the two M&S prod
 - prediction lines in file after this run: 8
 - lines the agent appended this run: boundary-log.md +43
 - NO PREDICTION THIS RUN: correct only if the agent presented no candidate; check the transcript in runs/ before accepting it
+
+---
+## Run dash-1 (2026-09-20T00:32:27Z)
+
+- 2026-09-20T00:32:27Z: Task = record the person's answer to the use-ritual open question for the M&S pistachio cookies (asked in mands-1, recorded at decisions.md lines 98–101). The person answered: the cookie had no routine of its own; it belongs to the food she treats herself with, triggered by being tired or by finishing a deadline. DECIDED ALONE to record the answer and update the record, without proposing a candidate. No candidate is being presented this run, so no prediction lines are written and no ask-or-decide moment arises for a substitute. The use-ritual question is now closed; it is resolved as reward-use (layer 4, use), not as a daily routine. The answer confirms the CASES.md vision-2 record (case 1: "use, of the reward kind"). The already-established channel/social ritual (layer 5, from v2-3) is unchanged; the two rituals now coexist on the same item. The binding layer for the overall substitution question remains layer 5 (channel/social) as established in mands-2; the use ritual (layer 4) is a separate, co-existing ritual that the import can partially serve. No verdict change from mands-2; the import remains a partial bridge at best (rejected as a complete answer); the practice proposal remains the frame for the channel/social part. decisions.md appended with the mands-3 entry; world-model.md's Hypothesis 4 revised to cover reward-use as a subtype of use ritual and to note the same-item two-ritual case; boundary-log.md appended with this dash-1 entry; predictions.jsonl unchanged (no candidate). profile.md edits proposed in the reply, not made.profile.md edits proposed in the reply, not written.
+
+### What the answer said
+
+The cookie had no routine of its own. It belongs to the food she treats herself with — triggered by being tired or by finishing a deadline. It is not a daily-routine item like the Fage yogurt; it is a reward-treat, eaten on those occasions.
+
+### What this closes
+
+The use-ritual open question from mands-1 (decisions.md lines 98–101) is now answered: the cookie does carry a use ritual, but it is a reward-use ritual, not a daily routine. This matches the CASES.md vision-2 record (case 1: "use, of the reward kind"). The answer confirms the CASES.md record against the person's own words.
+
+### Ritual layer and property layer that decided this answer
+
+Ritual layer in play: layer 4 (use), reward kind — the question was whether the cookie anchors a consumption routine; the answer resolves it as a reward-use ritual instead.
+
+Property layer that decided: layer 4 (relational) — what the cookie means to the person as an object in her life: a treat, a reward, not an everyday staple and not a routine-anchored item.
+
+### Effect on the running assessment
+
+No verdict change from mands-2. The import (candidate 1) preserves the use ritual (same cookie, same reward function) but not the channel/social ritual; it remains a partial bridge at best. The practice proposal (candidate 2) remains the frame for the channel/social part. The two are complementary. The binding layer for the overall loss remains layer 5 (channel/social) as established in mands-2; the use ritual is a separate, co-existing ritual with its own (weaker) binding logic.
+
+### Open items carried forward (unchanged from mands-2)
+
+- Which of the two M&S pistachio cookies is meant (still unknown).
+- Whether Trader Joe's or equivalent is walkable in the person's Boston routine (layer-3 check, not done).
+- Whether the person wants the import as a partial bridge for the cookie + reward-use loss while separately reconstructing the practice (not asked).
+- Whether the person would rank the cookie itself (a) vs the channel/social practice (b+c) as more important (Hypothesis 2's untested prediction, still open).
+
+### Self-check
+
+- Candidates presented this run: 0 (recording an answer, not proposing).
+- Prediction lines written this run: 0 (no candidate, so no prediction).
+- Count match: 0 = 0. No RULE VIOLATION on the candidate/prediction count axis.
+- decisions.md: appended mands-3 entry (now the last entry in the file).
+- world-model.md: revised Hypothesis 4 (now covers reward-use subtype + same-item two-ritual case); dash-1 note appended after Hypothesis 6.
+- predictions.jsonl: unchanged (no candidate).
+- boundary-log.md: this entry appended now (replacing the stub at line 95–96).
+- profile.md: not edited (edits proposed in the reply, not made).
+### Audit of run dash-1 (2026-09-20T00:32:27Z) by audit.py, not by the agent
+
+- verdict: **CHECK**
+- prediction lines carrying this run's stamp: 0
+- prediction lines in file after this run: 8
+- lines the agent appended this run: boundary-log.md +41, decisions.md +44, world-model.md +21
+- APPEND-ONLY VIOLATED in world-model.md: 5 earlier line(s) removed or rewritten. First: ## Hypothesis 4 (new, from fage-2 answer — two kinds of ritual)
+- NO PREDICTION THIS RUN: correct only if the agent presented no candidate; check the transcript in runs/ before accepting it

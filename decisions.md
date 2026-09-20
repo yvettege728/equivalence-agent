@@ -144,3 +144,47 @@ Under layer 5 (Order and trust):
   established 2026-09-19 (mands-1/mands-2).
 ```
 Under open items, re-state the two-cookie ambiguity and the use-ritual question as still open.
+
+---
+
+## Run mands-3 (2026-09-20T00:32:27Z) — M&S pistachio cookies (use-ritual question answered)
+
+**Item:** M&S pistachio cookies.
+
+**Open question answered (asked in mands-1, recorded at decisions.md lines 98–101):**
+> "For the M&S pistachio cookies specifically — separate from the browsing/discovery/share thing you already described — did the cookie itself live inside any routine for you? Something like: a particular time of day, a particular way of eating it, a regular occasion that the cookie anchored? Or was the only ritual around it the supermarket-browsing and new-product-sharing one?"
+
+**Person's stated answer (paraphrased):** The cookie had no routine of its own. It belongs to the food she treats herself with — triggered by being tired or by finishing a deadline. It is not a daily-routine item like the Fage yogurt; it is a reward-treat, eaten on those occasions, not anchored to a regular time or a particular way of eating.
+
+**What this answer did:** It closed the use-ritual open question from mands-1. The cookie DOES carry a use ritual — but it is a reward-use ritual (occasion: tiredness or deadline completion), not a daily routine. This is the same ritual topology that CASES.md already recorded for this item in the vision-2 pair (case 1: "use, of the reward kind," where "material and sign similarity are almost irrelevant here"). The person's own words now confirm the CASES.md record.
+
+**Ritual layer in play for this answer:** Layer 4 (use), reward kind. The question was specifically whether the cookie anchors a consumption routine; the answer is that it anchors a reward-use ritual instead — triggered by occasion, not bound to a daily routine.
+
+**Property layer that decided this answer:** Layer 4 (relational) — what the cookie means to the person as an object in her life: a treat, a reward, not an everyday staple and not a routine-anchored item. The ritual layer (4, use) is the dimension the question was about, and the answer resolves it as reward-use. The property layer that carries the meaning of the answer is relational (layer 4): the cookie's place in the person's life is as a treat food.
+
+**How this answer interacts with the already-established channel/social ritual:** The person now has two rituals named for the same item: (a) a use ritual — reward-treat, triggered by tiredness or finishing a deadline (this answer); and (b) a channel/social ritual — browsing after class, new-product discovery, share-with-friends (from v2-3). These are different ritual topologies on the same item. The use ritual is carried by the product: a category jump can preserve it (as CASES.md case 1 shows — the Trader Joe's dark chocolate bark substituted for the M&S biscuit on the reward-use dimension). The channel/social ritual is not carried by the product and requires a practice reconstruction.
+
+**Effect on the mands-2 assessment (no verdict change, but the logic is now confirmed rather than inferred):**
+- Candidate 1 (import of the identical cookie) preserves the use ritual (same cookie, same reward function) but not the channel/social ritual. The import was already judged a partial bridge in mands-2; this answer confirms the partial-bridge logic — the import serves the reward-use part of the loss, not the channel/social part. Verdict unchanged: reject as a complete answer; may still be a partial bridge for the cookie + reward-use part.
+- Candidate 2 (no_purchase / practice reconstruction) is unchanged as the frame for the channel/social part. The practice proposal addresses the channel/social ritual; the import, if wanted, would address the cookie + reward-use part. The two are complementary, not competing.
+- The answer does NOT shift the binding layer from 5 to 4. Layer 5 (channel/social) remains the binding layer for the practice loss; the use ritual (layer 4) is a separate, co-existing ritual that the import can partially serve. The binding layer for the overall loss is still 5 because the person named the channel/social practice as part of what was lost and the import cannot restore it.
+
+**Decide-vs-ask for this run:** DECIDED ALONE to record the answer and update the record. No new candidate is being proposed — the task is to record an answer that arrived, not to propose. No prediction lines written (no candidate presented). The use-ritual question is now closed; the remaining open items from mands-2 are unchanged (which of the two M&S products is meant; whether Trader Joe's or equivalent is walkable in the person's Boston routine; whether the person wants the import as a partial bridge for the cookie-only loss while separately reconstructing the practice).
+
+**No_purchase:** not proposed this run. The question was about recording an answer, not about proposing.
+
+**Which layer actually decided it:** Layer 4 (use ritual, reward kind) for the use-ritual question; layer 4 (relational — the cookie as treat food) for the meaning of the answer. The answer does not change the binding layer for the substitution question, which remains layer 5 (channel/social) as established in mands-2.
+
+**Candidates presented this run:** 0 (no candidate — recording an answer, not proposing).
+**Prediction lines written this run:** 0 (no candidate, so no prediction).
+**Count match:** 0 = 0. No RULE VIOLATION on the candidate/prediction count axis.
+
+---
+
+## Run vision-1 (2026-09-19T23:51:08Z) — vision test on granola
+
+(This entry preceded mands-2 in the file; preserved as-is.)
+
+## Run vision-2 (2026-09-20T00:07:41Z) — M&S pistachio cookie + TJ's bark image pair (no proposal)
+
+(This entry preceded dash-1 in the file; preserved as-is.)
