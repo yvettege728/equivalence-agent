@@ -1,0 +1,1 @@
+- [ ] Shanghai toast jam: Tiptree Essex Strawberry Conserve Jam | where: confluence (major retail, Boston) | price: premium; typical for Tiptree | url: N/A | recheck: 2026-10-23 | added 2026-09-23T20:24:33Z run v4-2

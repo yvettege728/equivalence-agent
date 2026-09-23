@@ -1,0 +1,13 @@
+LEDGER WROTE  plans.jsonl: plan for Shanghai toast jam
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Mackay's Scottish Raspberry Jam as v4-2#1
+LEDGER WROTE  predictions.jsonl: prediction on Great Value Blackberry Preserves as v4-2#2
+LEDGER WROTE  predictions.jsonl: prediction on Tiptree Essex Strawberry Conserve Jam as v4-2#3
+LEDGER: 3 written, 0 refused
+LEDGER WROTE  boundary-log.md: boundary decide
+LEDGER WROTE  shopping-list.md: action for Tiptree Essex Strawberry Conserve Jam
+LEDGER REFUSED line 1: decision record is missing deciding_layer, ritual_layer
+LEDGER REFUSED line 2: decision record is missing deciding_layer, ritual_layer
+LEDGER REFUSED line 3: decision record is missing deciding_layer, ritual_layer
+LEDGER: 2 written, 3 refused
+SCORE: 0 prediction(s) closed this run

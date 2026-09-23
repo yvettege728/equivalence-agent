@@ -394,3 +394,16 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - ledger: 8 record(s) written by the wrapper, 0 refused
 - plan: worked 'Fage Total 5% yogurt', stop condition stated
 - this run: 3 prediction(s), 3 decision(s)
+- 2026-09-23T20:24:33Z | run: v4-2 | moment: decide | went: decide | reason: Decisions made within the context of relational and material fidelity, with no unresolved brand questions or open items flagged in the profile related to the ritual in question.
+
+### Audit of run v4-2 (2026-09-23T20:24:33Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 6 record(s) written by the wrapper, 3 refused
+- plan: worked 'Shanghai toast jam', stop condition stated
+- this run: 3 prediction(s), 0 decision(s)
+- LEDGER REFUSED A RECORD: line 1: decision record is missing deciding_layer, ritual_layer
+- LEDGER REFUSED A RECORD: line 2: decision record is missing deciding_layer, ritual_layer
+- LEDGER REFUSED A RECORD: line 3: decision record is missing deciding_layer, ritual_layer
+- SCORE CONTAMINATED: the judge was shown the scout's predictions, so any hit rate from this run measures agreement, not accuracy.
