@@ -27,9 +27,11 @@ person).
 
 No prediction has been scored yet. Treat your confidence as untested.
 
-## Predictions still open (0)
+## Predictions still open (3)
 
-(none)
+- FAGE 5% Plain Greek Yogurt (16 oz) for Fage Total 5% yogurt: predicted accept at 0.8, deciding layer 1
+- Chobani Plain Whole Milk Greek Yogurt (32 oz) for Fage Total 5% yogurt: predicted accept at 0.6, deciding layer 1
+- Great Value Plain Greek Yogurt Nonfat (5.3 oz) for Fage Total 5% yogurt: predicted reject at 0.3, deciding layer 1
 
 ## Last decisions
 

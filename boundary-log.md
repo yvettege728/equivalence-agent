@@ -385,3 +385,12 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - this run: 0 prediction(s), 0 decision(s)
 - NO PLAN: this run produced no plan record, so nothing states what it set out to do or when it meant to stop
 - NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
+- 2026-09-23T20:22:06Z | run: v4-1 | moment: deciding_layer | went: ask | reason: Layer 5 trust unknown; Boston-specific brand-ecosystem attachment unclear.
+
+### Audit of run v4-1 (2026-09-23T20:22:06Z) by audit.py, not by any agent
+
+- verdict: **CLEAN**
+- custody: no record file changed while an agent was running
+- ledger: 8 record(s) written by the wrapper, 0 refused
+- plan: worked 'Fage Total 5% yogurt', stop condition stated
+- this run: 3 prediction(s), 3 decision(s)

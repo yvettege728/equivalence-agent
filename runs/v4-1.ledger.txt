@@ -14,3 +14,18 @@ LEDGER: no ledger block in the reply. Nothing written.
 LEDGER: no ledger block in the reply. Nothing written.
 LEDGER: no ledger block in the reply. Nothing written.
 SCORE: 0 prediction(s) closed this run
+LEDGER WROTE  plans.jsonl: plan for Fage Total 5% yogurt
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on FAGE 5% Plain Greek Yogurt (16 oz) as v4-1#1
+LEDGER WROTE  predictions.jsonl: prediction on Chobani Plain Whole Milk Greek Yogurt (32 oz) as v4-1#2
+LEDGER WROTE  predictions.jsonl: prediction on Great Value Plain Greek Yogurt Nonfat (5.3 oz) as v4-1#3
+LEDGER: 3 written, 0 refused
+LEDGER WROTE  decisions.md: accept on FAGE 5% Plain Greek Yogurt (16 oz)
+LEDGER WROTE  decisions.md: accept on Chobani Plain Whole Milk Greek Yogurt (32 oz)
+LEDGER WROTE  decisions.md: reject on Great Value Plain Greek Yogurt Nonfat (5.3 oz)
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER: 4 written, 0 refused
+SCORED v4-1#1 FAGE 5% Plain Greek Yogurt (16 oz): predicted accept, actual accept -> hit
+SCORED v4-1#2 Chobani Plain Whole Milk Greek Yogurt (32 oz): predicted accept, actual accept -> hit
+SCORED v4-1#3 Great Value Plain Greek Yogurt Nonfat (5.3 oz): predicted reject, actual reject -> hit
+SCORE: 3 prediction(s) closed this run

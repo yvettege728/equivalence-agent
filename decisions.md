@@ -218,3 +218,6 @@ Under open items, re-state the two-cookie ambiguity and the use-ritual question 
 
 ---
 
+2026-09-23T20:22:06Z | run: v4-1 | item: Fage Total 5% yogurt | candidate: FAGE 5% Plain Greek Yogurt (16 oz) | accept | reason: Preserves material attributes; direct brand alignment supports layer 4. | property layer decided:  | ritual layer decided: 
+2026-09-23T20:22:06Z | run: v4-1 | item: Fage Total 5% yogurt | candidate: Chobani Plain Whole Milk Greek Yogurt (32 oz) | accept | reason: Material alignment exists, generic category habitual use plausible for layer 4, but lacks strong brand-specific ties. | property layer decided:  | ritual layer decided: 
+2026-09-23T20:22:06Z | run: v4-1 | item: Fage Total 5% yogurt | candidate: Great Value Plain Greek Yogurt Nonfat (5.3 oz) | reject | reason: Material misalignment (nonfat, original is full fat undermines layer 4); fails ritual fidelity for taste and fats. | property layer decided:  | ritual layer decided: 
