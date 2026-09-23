@@ -1,0 +1,18 @@
+LEDGER WROTE  plans.jsonl: plan for M&S ecosystem, Boston
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on December Thieves as v4-4#1
+LEDGER WROTE  predictions.jsonl: prediction on Boston General Store as v4-4#2
+LEDGER WROTE  predictions.jsonl: prediction on Wyllo as v4-4#3
+LEDGER: 3 written, 0 refused
+LEDGER WROTE  decisions.md: ask on December Thieves
+LEDGER WROTE  decisions.md: reject on Boston General Store
+LEDGER WROTE  decisions.md: reject on Wyllo
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER: 6 written, 0 refused
+SCORED v4-4#2 Boston General Store: predicted reject, actual reject -> hit; layer scout 3 vs judge 5  DISAGREE
+SCORED v4-4#3 Wyllo: predicted reject, actual reject -> hit; layer scout 2 vs judge 5  DISAGREE
+SCORE: 2 prediction(s) closed this run
+QUEUE M&S ecosystem, Boston: open -> parked
+QUEUE: 1 change(s)
