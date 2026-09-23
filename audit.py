@@ -146,8 +146,9 @@ def main(label, stamp):
                             f"written to the shopping list, so the decision leads nowhere.")
 
     # 11. the scoring has to be independent of the bet
-    cands = Path(f"stage/judge/candidates.md")
-    if cands.exists() and ("```ledger" in cands.read_text() or "confidence" in cands.read_text()):
+    cands = Path("stage/judge/candidates.md")
+    leak = ("```ledger", '"predict"', '"confidence"')
+    if cands.exists() and any(s in cands.read_text() for s in leak):
         findings.append("SCORE CONTAMINATED: the judge was shown the scout's predictions, so any "
                         "hit rate from this run measures agreement, not accuracy.")
 
