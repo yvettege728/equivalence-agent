@@ -16,6 +16,27 @@ BLOCK = re.compile(r"```ledger\s*\n(.*?)```", re.S)
 
 VERDICTS = {"accept", "accepted", "reject", "rejected", "no_purchase", "ask"}
 
+# Fields a record is refused without. The agent's own summary of what it did is
+# not evidence; an incomplete record is worse than a missing one, because it
+# looks like a record.
+NEEDED = {
+    "plan": ["item", "why_this_item", "ritual_hypothesis", "stop_when"],
+    "prediction": ["item", "candidate", "predict", "confidence", "deciding_layer",
+                   "ritual_layer", "why"],
+    "decision": ["item", "candidate", "verdict", "reason", "deciding_layer", "ritual_layer"],
+    "hypothesis": ["text", "status", "evidence"],
+    "boundary": ["moment", "went", "reason"],
+    "profile_proposal": ["section", "wording"],
+    "action": ["item", "candidate", "where"],
+}
+
+
+def check(rec):
+    kind = rec.get("record")
+    missing = [f for f in NEEDED.get(kind, []) if not str(rec.get(f, "")).strip()]
+    if missing:
+        raise ValueError(f"{kind} record is missing {', '.join(missing)}")
+
 
 def parse(text):
     """Every ledger block in the transcript, as (line_no, dict) or (line_no, error)."""
@@ -52,6 +73,9 @@ def next_pred_id(label):
 def route(rec, label, stamp):
     """Write one record. Returns (file, description) or raises ValueError."""
     kind = rec.get("record")
+    if kind not in NEEDED:
+        raise ValueError(f"unknown record type {kind!r}")
+    check(rec)
     g = lambda k, d="": str(rec.get(k, d)).replace("\n", " ").strip()
 
     if kind == "plan":

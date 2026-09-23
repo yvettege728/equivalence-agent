@@ -46,9 +46,25 @@ def tail(path, n, structured=True):
     return lines[-n:]
 
 
+def void_runs():
+    """Run labels whose scores must not count. Operator-maintained."""
+    p = Path("scores-void.txt")
+    if not p.exists():
+        return set()
+    out = set()
+    for line in p.read_text().splitlines():
+        line = line.rstrip()
+        if line and not line.startswith("#") and not line.startswith(" "):
+            out.add(line.split()[0])
+    return out
+
+
 def hit_rates():
-    """Per deciding-layer accuracy, from scored predictions only."""
-    scores = jsonl("scores.jsonl")
+    """Per deciding-layer accuracy, from scored predictions only, skipping any
+    run whose score was voided."""
+    void = void_runs()
+    scores = [s for s in jsonl("scores.jsonl")
+              if str(s.get("prediction_id", "")).split("#")[0] not in void]
     by = defaultdict(lambda: [0, 0])
     for s in scores:
         layer = str(s.get("deciding_layer", "?"))

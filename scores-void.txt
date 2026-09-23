@@ -1,0 +1,10 @@
+# Runs whose scores are void, one label per line, with the reason.
+#
+# Records are append-only, so a bad score is not deleted. It is listed here and
+# context.py excludes it from the hit rate. Written by the operator, never by an
+# agent.
+
+v4-1  the judge was handed the scout's full transcript, including the prediction
+      block, so its three agreements measure agreement and not accuracy. Fixed
+      the same day: the wrapper now renders candidates.md from the scout's
+      records with predict and confidence stripped.

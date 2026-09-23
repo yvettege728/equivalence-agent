@@ -130,6 +130,27 @@ def main(label, stamp):
         findings.append("NO BOUNDARY RECORD: the judge never said where it chose to ask rather "
                         "than decide, which is the one thing it is supposed to own")
 
+    # 9. the world model has to move, or the run learned nothing
+    if decided and not any(f"run: {label} " in l
+                           for l in Path("world-model.md").read_text().splitlines()):
+        findings.append("WORLD MODEL UNCHANGED: the run reached decisions but added, revised or "
+                        "retired no hypothesis. A run that decides without learning is a lookup.")
+
+    # 10. an accepted candidate that produces no action is a decision nobody can act on
+    accepted = [l for l in decided if "| accept |" in l or "| accepted |" in l]
+    if accepted:
+        acts = Path("shopping-list.md")
+        have = acts.exists() and any(f"run {label}" in l for l in acts.read_text().splitlines())
+        if not have:
+            findings.append(f"NO ACTION: {len(accepted)} candidate(s) accepted but nothing was "
+                            f"written to the shopping list, so the decision leads nowhere.")
+
+    # 11. the scoring has to be independent of the bet
+    cands = Path(f"stage/judge/candidates.md")
+    if cands.exists() and ("```ledger" in cands.read_text() or "confidence" in cands.read_text()):
+        findings.append("SCORE CONTAMINATED: the judge was shown the scout's predictions, so any "
+                        "hit rate from this run measures agreement, not accuracy.")
+
     verdict = "CLEAN" if not findings else "CHECK"
     out = [f"\n### Audit of run {label} ({stamp}) by audit.py, not by any agent\n",
            f"- verdict: **{verdict}**"]
