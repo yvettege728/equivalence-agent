@@ -418,3 +418,12 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - LEDGER REFUSED A RECORD: line 1: decision record is missing deciding_layer, ritual_layer
 - LEDGER REFUSED A RECORD: line 2: decision record is missing deciding_layer, ritual_layer
 - LEDGER REFUSED A RECORD: line 3: decision record is missing deciding_layer, ritual_layer
+- 2026-09-23T20:26:01Z | run: v4-3 | moment: stop_when_found | went: ask | reason: Boundary respected on Kaya's alignment
+
+### Audit of run v4-3 (2026-09-23T20:26:01Z) by audit.py, not by any agent
+
+- verdict: **CLEAN**
+- custody: no record file changed while an agent was running
+- ledger: 11 record(s) written by the wrapper, 0 refused
+- plan: worked 'Shanghai toast jam', stop condition stated
+- this run: 3 prediction(s), 3 decision(s)

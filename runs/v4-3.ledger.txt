@@ -1,0 +1,18 @@
+LEDGER WROTE  plans.jsonl: plan for Shanghai toast jam
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Smucker's Strawberry Jam as v4-3#1
+LEDGER WROTE  predictions.jsonl: prediction on Oregon Growers Marionberry Jam as v4-3#2
+LEDGER WROTE  predictions.jsonl: prediction on Kaya Coconut Jam as v4-3#3
+LEDGER: 3 written, 0 refused
+LEDGER WROTE  decisions.md: reject on Smucker's Strawberry Jam
+LEDGER WROTE  decisions.md: reject on Oregon Growers Marionberry Jam
+LEDGER WROTE  decisions.md: accept on Kaya Coconut Jam
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER WROTE  shopping-list.md: action for Kaya Coconut Jam
+LEDGER: 7 written, 0 refused
+SCORED v4-3#1 Smucker's Strawberry Jam: predicted accept, actual reject -> miss
+SCORED v4-3#2 Oregon Growers Marionberry Jam: predicted accept, actual reject -> miss
+SCORED v4-3#3 Kaya Coconut Jam: predicted accept, actual accept -> hit
+SCORE: 3 prediction(s) closed this run

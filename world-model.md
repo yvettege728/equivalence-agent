@@ -119,3 +119,4 @@ Each line: hypothesis, evidence, status (open / supported / retired).
 - Whether Trader Joe's or equivalent is walkable in the person's Boston routine (layer-3 check, not done).
 - Whether the person wants the import as a partial bridge for the cookie + reward-use loss while separately reconstructing the practice (not asked).
 - Whether the person would rank the cookie itself (a) vs the channel/social practice (b+c) as more important (Hypothesis 2's untested prediction, still open).
+2026-09-23T20:26:01Z | run: v4-3 | hypothesis: Added a mechanism for evaluating category preservation and layers that handle rituals rhythm-focused (morning-use adjustment filters). | status: added | evidence: Acceptance of Kaya Coconut Jam shows cultural resonance preferences over direct brand matches for entrenched rituals.
