@@ -6,3 +6,7 @@ LEDGER: no ledger block in the reply. Nothing written.
 LEDGER: no ledger block in the reply. Nothing written.
 LEDGER: no ledger block in the reply. Nothing written.
 SCORE: 0 prediction(s) closed this run
+LEDGER: no ledger block in the reply. Nothing written.
+LEDGER: no ledger block in the reply. Nothing written.
+LEDGER: no ledger block in the reply. Nothing written.
+SCORE: 0 prediction(s) closed this run
