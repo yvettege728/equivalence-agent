@@ -19,6 +19,13 @@ export PATH="$HOME/.local/bin:$PATH"
 
 LABEL="${1:?usage: ./run.sh <label> [extra instruction]}"
 EXTRA="${2:-}"
+
+# Provider override. With neither set, hermes uses its configured default.
+# Both must be given together or hermes refuses.
+MODEL_ARGS=()
+if [ -n "${AGENT_PROVIDER:-}" ] && [ -n "${AGENT_MODEL:-}" ]; then
+  MODEL_ARGS=(--provider "$AGENT_PROVIDER" -m "$AGENT_MODEL")
+fi
 STAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 RECORDS=(predictions.jsonl decisions.md world-model.md boundary-log.md plans.jsonl scores.jsonl proposals.md shopping-list.md)
 GIT=(git -c user.name="Yvette Ge" -c user.email="yvette_ge@gsd.harvard.edu")
@@ -39,7 +46,8 @@ phase () {
   local dir="stage/$name" out="runs/$LABEL.$name.md"
   hashes > ".custody/$LABEL.$name.before"
   echo "=== $LABEL / $name ==="
-  hermes --in "$PWD/$dir" --skills substitution-scout -t "$tools" -z "$prompt" 2>&1 | tee "$out"
+  hermes --in "$PWD/$dir" "${MODEL_ARGS[@]+"${MODEL_ARGS[@]}"}" \
+    --skills substitution-scout -t "$tools" -z "$prompt" 2>&1 | tee "$out"
   hashes > ".custody/$LABEL.$name.after"
   if ! diff -q ".custody/$LABEL.$name.before" ".custody/$LABEL.$name.after" >/dev/null; then
     echo "CUSTODY VIOLATION in phase $name: a record file changed while the agent was running" \
@@ -97,4 +105,4 @@ python3 score.py "$STAMP" | tee -a "runs/$LABEL.ledger.txt"
 python3 audit.py "$LABEL" "$STAMP" || echo "AUDIT FOUND VIOLATIONS (recorded, not fatal)"
 "${GIT[@]}" add -A >/dev/null 2>&1
 "${GIT[@]}" commit -q -m "run $LABEL"
-echo "--- run $LABEL done, stamp $STAMP"
+echo "--- run $LABEL done, stamp $STAMP${AGENT_MODEL:+, model $AGENT_PROVIDER/$AGENT_MODEL}"
