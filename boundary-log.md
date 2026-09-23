@@ -349,3 +349,12 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - prediction lines in file after this run: 8
 - lines the agent appended this run: boundary-log.md +4, decisions.md +30
 - NO PREDICTION THIS RUN: correct only if the agent presented no candidate; check the transcript in runs/ before accepting it
+
+### Audit of run v4-1 (2026-09-23T20:07:02Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 0 record(s) written by the wrapper, 0 refused
+- this run: 0 prediction(s), 0 decision(s)
+- NO PLAN: this run produced no plan record, so nothing states what it set out to do or when it meant to stop
+- NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
