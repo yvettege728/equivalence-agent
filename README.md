@@ -54,6 +54,29 @@ writes hit or miss to `scores.jsonl`. No model is involved. `context.py` then
 renders the agent's own accuracy per layer into the next run's `context.md`, so
 a run that has been wrong about layer 5 is told so before it predicts again.
 
+## What custody did not fix
+
+Run v4-3 is clean: eleven records, none refused, a plan with a stop condition,
+three decisions carrying both layers, a hypothesis, a boundary, a proposal and
+an action. The ledger enforced all of that.
+
+The content is still poor. That run's hypothesis reads "Added a mechanism for
+evaluating category preservation and layers that handle rituals rhythm-focused",
+its profile proposal is unparseable, its boundary claims it asked without asking
+anything, and it answered a Shanghai breakfast jam with a Southeast Asian kaya,
+reasoning from "Asian-market adjacency" as though Asia were a category.
+
+So the two problems separate cleanly:
+
+| | record integrity | content quality |
+|---|---|---|
+| architecture | fixed: forgery is now physically impossible | no effect: the auditor can check that a hypothesis exists, not that it means anything |
+| model strength | no effect: gpt-5.4 wrote zero bytes too | this is where it bites: gpt-4o invents and sometimes emits corrupted prose |
+
+Custody separation cures forgery. It does not cure nonsense. The auditor's
+ceiling is presence, not truth, and closing that gap needs an external verifier
+rather than a stricter wrapper.
+
 ## Layout
 
 | Path | What it is |
