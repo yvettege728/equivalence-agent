@@ -1,1 +1,1 @@
-The tool failed to locate `plan.md` and `persona.md`, blocking this task. Ripgrep, if installed, can overcome this limitation. Install ripgrep or provide a narrower path, and I will retry.
+I could not read the required files (plan.md, persona.md, cases/CASES.md). This prevents me from completing the request under the rules. Let me know if I should attempt a resolution or if external dependencies are unavailable temporarily.
