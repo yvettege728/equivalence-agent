@@ -1,6 +1,6 @@
 # Real substitutions, recorded by the person
 
-Four cases from one move, London to Boston. Images in `cases/images/`.
+Five cases from one move, London to Boston. Images in `cases/images/`.
 These are the ground truth for what "substitute" means to this person. Read
 them before proposing anything, and say which case a new item resembles.
 
@@ -46,18 +46,48 @@ material and the brand are both available. Recognition is a precondition for
 loyalty, not a consequence of it. An agent that matches on brand name would have
 solved this instantly; the person, matching on appearance, could not.**
 
-## 4. Soya milk
+## 4. Soya milk: one item split into two cells
 
-- `soya_milk_uk.webp` is on file. The person has not yet said what happened to
-  this one. Ask before assuming it follows any of the patterns above.
+- Lost: the soya milk she drank in London (`soya_milk_uk.webp`).
+- It served two different rituals at once. Each was replaced differently.
+- **Coffee cell.** Ritual layer 4, use, as an ingredient. Substituted at the
+  material layer by almond milk. Category changed, nobody minded.
+- **Evening cell.** Drunk straight at night as a comfort drink, and recommended
+  to friends who had just arrived in London. Ritual layers 4 and 5 together.
+  Korean soy milk from H Mart and doujiang from Weee were bought and are fine
+  as objects, but the cell is not repaired: what was lost includes being the
+  person other people asked.
+- Channel finding: the material substitute was not in mainstream US grocery. It
+  was in diaspora retail, H Mart and Weee. Confluence, in Karpik's sense, is
+  doing the judging: which shop stocks it decides whether it can be found.
 
-## Three mechanisms, so far
+**Lesson: an item is not the unit of substitution. The cell is. Before searching,
+split the item by occasion, because one object can sit in two cells that need
+two different answers, and one of them may need no purchase at all.**
+
+## 4b. The same item, lost to vocabulary
+
+- In London she called it soya milk. Here it is usually called soymilk.
+- She searched for the London term and the local market did not answer.
+- Property layer that failed: sign, but at the level of language rather than
+  packaging. Same family as case 3.
+
+**Lesson: recognition failure has a lexical form. An agent that searches only the
+person's own words inherits the person's blind spot. Translate the term into the
+local market's vocabulary and search both, then say which one the market uses.**
+
+## Five mechanisms, so far
 
 | Mechanism | Case | What the agent should look for |
 |---|---|---|
 | Category jump | cookie | the occasion, not the product |
 | Self-assembly | granola | whether components exist, and whether she would enjoy composing |
 | Unintended switch | oat milk | whether the original is actually here under a different look |
+| Split | soya milk | whether one item is serving two occasions that need two answers |
+| Lexical miss | soya milk, naming | whether the thing exists here under a different word |
 
-An agent's first job on a new item is to say which of these three is in play,
-and to check mechanism 3 before accepting any switch the person already made.
+An agent's first job on a new item is to say which of these five is in play. It
+should check mechanism 3 before accepting any switch the person already made,
+and it should run the split test before searching at all, because searching for
+one substitute when two cells are open produces a candidate that satisfies
+neither.
