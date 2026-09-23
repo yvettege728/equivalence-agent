@@ -1,1 +1,1 @@
-hermes -z: agent failed: Refresh token exchange failed
+hermes -z: agent failed: No access token found for Nous Portal login.
