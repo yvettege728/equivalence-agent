@@ -52,6 +52,14 @@ for f in "${RECORDS[@]}"; do [ -f "$f" ] || : > "$f"; done
 mkdir -p runs .custody
 rm -rf stage && mkdir -p stage/plan stage/scout stage/judge
 
+# Each box gets its own copy of the skill. Hermes resolves skills relative to the
+# directory it starts in, and the agents start inside their box, so a skill that
+# lives only in the repository root is invisible to them.
+for b in plan scout judge; do
+  mkdir -p "stage/$b/.hermes"
+  cp -a .hermes/skills "stage/$b/.hermes/"
+done
+
 hashes () { for f in "${RECORDS[@]}"; do shasum -a 256 "$f"; done; }
 
 # Runs one agent in its own box and refuses to let its reply become a record
