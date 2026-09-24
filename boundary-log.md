@@ -445,3 +445,14 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - plan: worked 'Fage Total 5% yogurt', stop condition stated
 - this run: 3 prediction(s), 0 decision(s)
 - NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
+- 2026-09-24T00:07:11Z | run: v4-6 | moment: start | went: ask | reason: planner record empty; relying on default guidance
+- 2026-09-24T00:07:11Z | run: v4-6 | moment: Fage Total 5% yogurt | went: ask | reason: Neither the yogurt's breaking ritual confirmed (4 suspected) nor property order-layer clarified for trust habits (layer 5 clash plausible).
+
+### Audit of run v4-6 (2026-09-24T00:07:11Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 3 record(s) written by the wrapper, 1 refused
+- this run: 0 prediction(s), 0 decision(s)
+- LEDGER REFUSED A RECORD: line 1: decision record has placeholder values in candidate, deciding_layer; write what you actually found, or say 'not verified' and why
+- NO PLAN: this run produced no plan record, so nothing states what it set out to do or when it meant to stop

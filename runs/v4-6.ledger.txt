@@ -1,0 +1,9 @@
+LEDGER: no ledger block in the reply. Nothing written.
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER REFUSED line 1: decision record has placeholder values in candidate, deciding_layer; write what you actually found, or say 'not verified' and why
+LEDGER: 2 written, 1 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE: 0 change(s)
