@@ -1,0 +1,8 @@
+LEDGER WROTE  plans.jsonl: plan for Fage Total 5% yogurt
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Fage Total 5% Plain Greek Yogurt, 32 oz from Fage USA as v4-5#1
+LEDGER WROTE  predictions.jsonl: prediction on Fage Total 5% Plain Greek Yogurt, 5.3 oz from Target as v4-5#2
+LEDGER WROTE  predictions.jsonl: prediction on Fage Total 5% Plain Greek Yogurt, 5.3 oz from Whole Foods as v4-5#3
+LEDGER: 3 written, 0 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE: 0 change(s)

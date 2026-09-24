@@ -436,3 +436,12 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - ledger: 10 record(s) written by the wrapper, 0 refused
 - plan: worked 'M&S ecosystem, Boston', stop condition stated
 - this run: 3 prediction(s), 3 decision(s)
+
+### Audit of run v4-5 (2026-09-24T00:05:51Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 4 record(s) written by the wrapper, 0 refused
+- plan: worked 'Fage Total 5% yogurt', stop condition stated
+- this run: 3 prediction(s), 0 decision(s)
+- NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
