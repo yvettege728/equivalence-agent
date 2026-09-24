@@ -1,2 +1,3 @@
 - [ ] Shanghai toast jam: Tiptree Essex Strawberry Conserve Jam | where: confluence (major retail, Boston) | price: premium; typical for Tiptree | url: N/A | recheck: 2026-10-23 | added 2026-09-23T20:24:33Z run v4-2
 - [ ] Shanghai toast jam: Kaya Coconut Jam | where: Niche Asian shops | price: None | url: None | recheck: None | added 2026-09-23T20:26:01Z run v4-3
+- [ ] Fage Total 5% yogurt: Fage Total 5% Yogurt | where: Fage USA online store | price: not verified: dynamic listings, indirect retrieval without session view online. | url: https://www.fageusa.com/products/fage-total-5-percent-plain-greek-yogurt | recheck: 2026-10-01 | added 2026-09-24T00:08:13Z run v4-7

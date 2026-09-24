@@ -456,3 +456,12 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - this run: 0 prediction(s), 0 decision(s)
 - LEDGER REFUSED A RECORD: line 1: decision record has placeholder values in candidate, deciding_layer; write what you actually found, or say 'not verified' and why
 - NO PLAN: this run produced no plan record, so nothing states what it set out to do or when it meant to stop
+- 2026-09-24T00:08:13Z | run: v4-7 | moment: discern-fidelity-layer-4 | went: ask | reason: Ritual layer consistency within category coherence is recurrently opaque without person's confirmed endorsement of secure relational stands beyond non-originals.
+
+### Audit of run v4-7 (2026-09-24T00:08:13Z) by audit.py, not by any agent
+
+- verdict: **CLEAN**
+- custody: no record file changed while an agent was running
+- ledger: 11 record(s) written by the wrapper, 0 refused
+- plan: worked 'Fage Total 5% yogurt', stop condition stated
+- this run: 3 prediction(s), 3 decision(s)

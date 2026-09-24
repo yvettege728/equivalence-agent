@@ -1,0 +1,21 @@
+LEDGER WROTE  plans.jsonl: plan for Fage Total 5% yogurt, split into 1 cell(s)
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Fage Total 5% Yogurt as v4-7#1
+LEDGER WROTE  predictions.jsonl: prediction on Sophia’s Greek Yogurt as v4-7#2
+LEDGER WROTE  predictions.jsonl: prediction on Plain Greek Yogurt, Walmart+ as v4-7#3
+LEDGER: 3 written, 0 refused
+LEDGER WROTE  decisions.md: accept on Fage Total 5% Yogurt
+LEDGER WROTE  decisions.md: reject on Sophia’s Greek Yogurt
+LEDGER WROTE  decisions.md: reject on Plain Greek Yogurt, Walmart+
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER WROTE  shopping-list.md: action for Fage Total 5% Yogurt
+LEDGER: 7 written, 0 refused
+SCORED v4-7#1 Fage Total 5% Yogurt: predicted accept, actual accept -> hit; layer scout 1 vs judge 4  DISAGREE
+SCORED v4-7#2 Sophia’s Greek Yogurt: predicted accept, actual reject -> miss; layer scout 1 vs judge 4  DISAGREE
+SCORED v4-7#3 Plain Greek Yogurt, Walmart+: predicted reject, actual reject -> hit; layer scout 1 vs judge 4  DISAGREE
+SCORE: 3 prediction(s) closed this run
+QUEUE Fage Total 5% yogurt: open -> settled
+QUEUE new cell: Fage Total 5% yogurt, morning-use cell
+QUEUE: 2 change(s)
