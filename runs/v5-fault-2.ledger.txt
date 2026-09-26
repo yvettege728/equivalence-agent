@@ -1,0 +1,11 @@
+INJECTED FAULT: no-web
+LEDGER WROTE  plans.jsonl: plan for soya milk, naming
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  boundary-log.md: boundary proceed
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER REFUSED line 1: decision record has placeholder values in candidate; write what you actually found, or say 'not verified' and why
+LEDGER REFUSED line 3: boundary record is missing reason
+LEDGER: 1 written, 2 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE: 0 change(s)
