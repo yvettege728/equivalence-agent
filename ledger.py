@@ -28,7 +28,7 @@ NEEDED = {
                    "ritual_layer", "why"],
     "decision": ["item", "candidate", "verdict", "reason", "deciding_layer", "ritual_layer"],
     "hypothesis": ["text", "status", "evidence"],
-    "boundary": ["moment", "went", "reason"],
+    "boundary": ["moment", "went", "reason"],  # went: ask | decide | retry | proceed
     "profile_proposal": ["section", "wording"],
     "action": ["item", "candidate", "where", "url", "price", "recheck"],
 }
