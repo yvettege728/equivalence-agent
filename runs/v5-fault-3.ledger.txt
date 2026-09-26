@@ -1,0 +1,14 @@
+INJECTED FAULT: dead-url
+LEDGER WROTE  plans.jsonl: plan for soya milk, naming
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  boundary-log.md: boundary retry
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER: 2 written, 0 refused
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary proceed
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER REFUSED line 1: decision record has placeholder values in candidate; write what you actually found, or say 'not verified' and why
+LEDGER REFUSED line 5: action record is missing url, price, recheck
+LEDGER: 3 written, 2 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE: 0 change(s)
