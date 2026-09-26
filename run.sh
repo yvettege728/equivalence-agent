@@ -90,6 +90,7 @@ phase () {
   [ "$HAS_NORESTORE" = 1 ] && flags+=(--no-restore-cwd)
   # --ignore-user-config is not safe here: it also stops the skill from loading.
   [ "$HAS_IGNORE" = 1 ] && flags+=(--ignore-rules)
+  echo "$tools" > ".custody/$LABEL.$name.tools"
   hashes > ".custody/$LABEL.$name.before"
   echo "=== $LABEL / $name ==="
   ( cd "$dir" && "$HERMES" "${flags[@]+"${flags[@]}"}" \
