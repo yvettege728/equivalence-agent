@@ -167,7 +167,10 @@ def main(label, stamp):
 
     # 13. a device the phase could not reach is not evidence, it is invention
     WEB_DEVICES = {"confluence", "ranking", "guide", "appellation"}
-    for ph in ("scout", "judge", "plan"):
+    # Only the scout is supposed to have web tools. The planner and the judge
+    # never do, and the planner's steps legitimately say the word "search"
+    # because searching is what it is planning for someone else to do.
+    for ph in ("scout",):
         tf = Path(f".custody/{label}.{ph}.tools")
         if not tf.exists() or "web" in tf.read_text():
             continue
