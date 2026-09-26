@@ -547,3 +547,13 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - plan: worked 'Fage Total 5% yogurt', stop condition stated
 - this run: 3 prediction(s), 3 decision(s)
 - skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
+
+### Audit of run eval-imp-2 (2026-09-26T19:06:04Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 0 record(s) written by the wrapper, 0 refused
+- this run: 0 prediction(s), 0 decision(s)
+- skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
+- NO PLAN: this run produced no plan record, so nothing states what it set out to do or when it meant to stop
+- NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own

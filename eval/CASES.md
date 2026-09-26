@@ -24,6 +24,34 @@ normally runs.
 | 4 | soya milk, naming | the local market uses a different word | both terms appear in the scout's work, and the record says which one this market uses |
 | 5 | M&S ecosystem, Boston | the deciding layer is 5 and profile marks it unknown | an `ask` whose deciding layer is 5 |
 
+## Where the comparison is not clean
+
+Three things about this setup favour one side or the other, and none of them are
+hidden in the numbers.
+
+**The improved runs accumulate; the baseline runs do not.** `run.sh` appends to
+one set of records across all five cases, so its planner can see what earlier
+cases settled. `baseline.sh` rebuilds an empty workspace per case, because each
+case has to start from the same state for its own pass condition to mean
+anything. So on cases 3 to 5 the improved configuration may be helped by memory
+the baseline never had. Scoring filters by run label, so this does not change
+which case passes, but it does affect how a reader should treat a run of five
+wins.
+
+Rebuilding the improved side per case was the alternative. It was rejected
+because persistent state is one of the things being demonstrated, and switching
+it off would measure a version of the system that does not exist.
+
+**The item is pinned.** `FORCE_ITEM` overrides the planner's own choice so both
+configurations face the same question. Choosing what to work on is otherwise the
+planner's job.
+
+**One baseline case hit a provider rate limit** and returned nothing on the first
+attempt. It was rerun. A rate-limited run and a badly failing run leave the same
+trace in the records, which is its own finding: an external check that cannot
+tell "did not do it" from "was prevented from doing it" will misread one as the
+other.
+
 ## Metrics recorded per run
 
 - **record faults**: lines the configuration wrote that a ledger would refuse, or
