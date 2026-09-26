@@ -74,6 +74,15 @@ done
 #   INJECT=no-web          the scout loses its search tools
 #   INJECT=dead-url        the scout is handed a URL that cannot resolve
 INJECT="${INJECT:-}"
+
+# FORCE_ITEM pins the item so the same case can be run under two configurations
+# and compared. It overrides the planner's own choice, which is the point of an
+# evaluation and not how the agent normally works; say so when reporting.
+# An evaluation runs against its own queue so the real one is not advanced by it.
+QUEUE_FILE="${QUEUE_FILE:-queue.md}"
+
+FORCED=""
+[ -n "${FORCE_ITEM:-}" ] && FORCED="For this run the item is fixed by the operator: work the queue item whose name contains '$FORCE_ITEM' and no other. Still record why it matters and your stop condition."
 : > ".custody/$LABEL.injected"
 [ -n "$INJECT" ] && echo "$INJECT" > ".custody/$LABEL.injected" \
   && echo "INJECTED FAULT: $INJECT" | tee -a "runs/$LABEL.ledger.txt"
@@ -108,11 +117,11 @@ COMMON="Current time: $STAMP. Never invent a time. Run label: $LABEL. Use the su
 
 # ---------------------------------------------------------------- plan
 python3 context.py stage/plan
-cp profile.md queue.md stage/plan/
+cp profile.md stage/plan/ && cp "$QUEUE_FILE" stage/plan/queue.md
 mkdir -p stage/plan/cases
 [ "$INJECT" = missing-cases ] || cp cases/CASES.md stage/plan/cases/
 phase plan "file,skills" \
-"$COMMON You are the PLANNER. Read exactly these files, by these absolute paths, and nothing else: $PWD/stage/plan/context.md, $PWD/stage/plan/queue.md, $PWD/stage/plan/profile.md, $PWD/stage/plan/cases/CASES.md. Relative paths do not resolve for your file tool, so always pass the absolute path. Do not search the filesystem and do not report them missing; they are there. Choose exactly ONE item from the queue to work this run. Prefer the item where an answer would resolve the deepest unknown, not the easiest one. Before anything else run the split test. Ask whether this item serves more than one occasion. Your plan record must carry split_test, one sentence stating the answer and the evidence for it. If it does serve more than one, also carry split_cells, a list naming each cell in the form '<item>, <occasion> cell', and work only the first one this run. The others become queue rows. Emit exactly one line, and it must begin with the characters {\"record\":\"plan\" . The full shape is: {\"record\":\"plan\",\"item\":\"...\",\"cell\":\"...\",\"why_this_item\":\"...\",\"split_test\":\"...\",\"ritual_hypothesis\":\"4\",\"steps\":[\"...\",\"...\"],\"stop_when\":\"...\"} Do not add ts or run. Do not emit any other line. $EXTRA"
+"$COMMON You are the PLANNER. Read exactly these files, by these absolute paths, and nothing else: $PWD/stage/plan/context.md, $PWD/stage/plan/queue.md, $PWD/stage/plan/profile.md, $PWD/stage/plan/cases/CASES.md. Relative paths do not resolve for your file tool, so always pass the absolute path. Do not search the filesystem and do not report them missing; they are there. Choose exactly ONE item from the queue to work this run. Prefer the item where an answer would resolve the deepest unknown, not the easiest one. $FORCED Before anything else run the split test. Ask whether this item serves more than one occasion. Your plan record must carry split_test, one sentence stating the answer and the evidence for it. If it does serve more than one, also carry split_cells, a list naming each cell in the form '<item>, <occasion> cell', and work only the first one this run. The others become queue rows. Emit exactly one line, and it must begin with the characters {\"record\":\"plan\" . The full shape is: {\"record\":\"plan\",\"item\":\"...\",\"cell\":\"...\",\"why_this_item\":\"...\",\"split_test\":\"...\",\"ritual_hypothesis\":\"4\",\"steps\":[\"...\",\"...\"],\"stop_when\":\"...\"} Do not add ts or run. Do not emit any other line. $EXTRA"
 
 python3 - "$LABEL" <<'PY'
 import json, sys, pathlib
@@ -177,7 +186,7 @@ PYJ
 
 # ---------------------------------------------------------------- judge
 python3 context.py stage/judge
-cp profile.md queue.md stage/judge/
+cp profile.md stage/judge/ && cp "$QUEUE_FILE" stage/judge/queue.md
 mkdir -p stage/judge/cases
 [ "$INJECT" = missing-cases ] || cp cases/CASES.md stage/judge/cases/
 phase judge "file,skills" \
@@ -185,7 +194,7 @@ phase judge "file,skills" \
 
 # ---------------------------------------------------------------- close
 python3 score.py "$STAMP" | tee -a "runs/$LABEL.ledger.txt"
-python3 queue.py "$LABEL" | tee -a "runs/$LABEL.ledger.txt"
+QUEUE_FILE="$QUEUE_FILE" python3 queue.py "$LABEL" | tee -a "runs/$LABEL.ledger.txt"
 python3 audit.py "$LABEL" "$STAMP" || echo "AUDIT FOUND VIOLATIONS (recorded, not fatal)"
 "${GIT[@]}" add -A >/dev/null 2>&1
 "${GIT[@]}" commit -q -m "run $LABEL"

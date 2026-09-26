@@ -12,7 +12,7 @@ Two jobs, both done by the wrapper and never by an agent:
 
 Usage: queue.py <label>
 """
-import json, re, sys
+import json, os, re, sys
 from pathlib import Path
 
 ACCEPTING = {"accept", "accepted"}
@@ -55,7 +55,7 @@ def decisions_for(label):
 
 
 def main(label):
-    q = Path("queue.md")
+    q = Path(os.environ.get("QUEUE_FILE", "queue.md"))
     if not q.exists():
         print("QUEUE: queue.md missing, nothing to do")
         return 0
