@@ -537,3 +537,13 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - fault named in: - 2026-09-26T17:50:42Z | run: v5-fault-3 | moment: direct_URL | went: ask | reason: Unable to fetch provided URL for direct listin
 - LEDGER REFUSED A RECORD: line 1: decision record has placeholder values in candidate; write what you actually found, or say 'not verified' and why
 - LEDGER REFUSED A RECORD: line 5: action record is missing url, price, recheck
+- 2026-09-26T19:05:22Z | run: eval-imp-1 | moment: Decision on Fage Total 5% yogurt | went: proceed | reason: Sufficient evidence available to judge all candidates' alignment with relational and trust layers without requiring clarification.
+
+### Audit of run eval-imp-1 (2026-09-26T19:05:22Z) by audit.py, not by any agent
+
+- verdict: **CLEAN**
+- custody: no record file changed while an agent was running
+- ledger: 11 record(s) written by the wrapper, 0 refused
+- plan: worked 'Fage Total 5% yogurt', stop condition stated
+- this run: 3 prediction(s), 3 decision(s)
+- skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)

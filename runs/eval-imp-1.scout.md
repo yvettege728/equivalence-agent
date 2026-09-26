@@ -1,0 +1,7 @@
+Three candidates for “Fage Total 5% yogurt” substitutes in Boston were identified. Here are their predictions:
+
+```ledger
+{"record":"prediction","item":"Fage Total 5% yogurt","candidate":"FAGE Total Greek Yogurt, 5% Whole Milk, Plain","predict":"accept","confidence":0.8,"deciding_layer":"1","ritual_layer":"4","device":"confluence","why":"Exact product available through Whole Foods Market, supports material properties and everyday ritual use. URL: https://www.wholefoodsmarket.com/grocery/product/fage-fage-total-greek-yogurt-5-whole-milk-plain-5-3-oz-b000wob94u"}
+{"record":"prediction","item":"Fage Total 5% yogurt","candidate":"Local Greek Yogurt from Gyro City","predict":"reject","confidence":0.3,"deciding_layer":"1","ritual_layer":"4","device":"guide","why":"Area-specific Greek yogurt listed from specialty eatery Gyro City lacks material congruence (significant packaging/material differences), and source consistency is unverified. URL: https://www.gyrocitybostonma.com/about-us"}
+{"record":"prediction","item":"Fage Total 5% yogurt","candidate":"Chobani Greek Yogurt (Whole Milk Variant)","predict":"accept","confidence":0.6,"deciding_layer":"1","ritual_layer":"4","device":"confluence","why":"Major commercial alternative offering similar material layer fidelity (whole milk, plain Greek yogurt match), though lacks identical thickness. URL: https://www.boston25news.com/news/business/chobani-recallsome-greek-yogurt-cups/140901987?outputtype=amp"}
+```
