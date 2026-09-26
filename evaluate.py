@@ -20,6 +20,9 @@ CASES = {
     5: ("ecosystem", "an ask whose deciding layer is 5"),
 }
 PRICE_WORDS = ("price", "cost", "shipping", "delivery", "postage", "cheaper")
+# A run whose model calls never landed measures the transport, not the agent.
+TRANSPORT_FAILURE = ("api call failed after", "http 429", "http 500", "http 502",
+                     "http 503", "rate limit", "connection error")
 
 
 def decisions(label):
@@ -52,9 +55,63 @@ def transcripts(label):
     return text
 
 
+ARCHIVE = None  # set to eval/baseline when scoring the archived baseline layout
+
+
+def arch_decisions(label):
+    """The baseline wrote prose, not fields, so it needs its own reader.
+
+    v3.1.0 emitted lines like
+      | item | accepted: ... Deciding layer: material (1). Ritual layer: use (4).
+    There is no run stamp, because the baseline archived one case per directory.
+    """
+    f = ARCHIVE / label / "decisions.md"
+    if not f.exists():
+        return []
+    out = []
+    for line in f.read_text().splitlines():
+        if not line.strip().startswith("|"):
+            continue
+        parts = [x.strip() for x in line.strip("|").split("|")]
+        if not parts:
+            continue
+        d = {"raw": line, "item": parts[0], "reason": " ".join(parts[1:])}
+        low = d["reason"].lower()
+        d["verdict"] = next((v for v in ("no_purchase", "accepted", "accept",
+                                         "rejected", "reject", "ask") if v in low), "")
+        m = re.search(r"deciding layer:\s*[a-z ]*\((\d)\)", low)
+        d["layer"] = m.group(1) if m else ""
+        out.append(d)
+    return out
+
+
+def arch_transcript(label):
+    f = ARCHIVE / label / "transcript.md"
+    return f.read_text().lower() if f.exists() else ""
+
+
+def voided(label):
+    """Phases whose model call never completed. Such a run scores nothing."""
+    if ARCHIVE:
+        t = arch_transcript(label)
+        if not t:
+            return ["transcript:missing"]
+        return ["run"] if any(w in t for w in TRANSPORT_FAILURE) else []
+    dead = []
+    for phase in ("plan", "scout", "judge"):
+        f = Path(f"runs/{label}.{phase}.md")
+        if not f.exists():
+            dead.append(phase + ":missing")
+            continue
+        low = f.read_text().lower()
+        if any(w in low for w in TRANSPORT_FAILURE):
+            dead.append(phase)
+    return dead
+
+
 def score(case, label):
-    ds = decisions(label)
-    tr = transcripts(label)
+    ds = arch_decisions(label) if ARCHIVE else decisions(label)
+    tr = arch_transcript(label) if ARCHIVE else transcripts(label)
     if case == 1:
         ok = any(d["verdict"] in ("accept", "accepted", "reject", "rejected") for d in ds)
         layers = {d.get("layer", "") for d in ds}
@@ -83,6 +140,8 @@ def score(case, label):
 def faults(label):
     """Records the configuration produced that a ledger would refuse."""
     n = 0
+    if ARCHIVE:
+        return sum(1 for d in arch_decisions(label) if not d.get("layer"))
     led = Path(f"runs/{label}.ledger.txt")
     if led.exists():
         n += sum(1 for l in led.read_text().splitlines() if l.startswith("LEDGER REFUSED"))
@@ -93,20 +152,36 @@ def faults(label):
 
 
 def main(config, prefix):
-    rows, passed, total_faults = [], 0, 0
+    rows, passed, scored, total_faults = [], 0, 0, 0
     for c, (item, cond) in CASES.items():
         label = f"{prefix}-{c}"
+        dead = voided(label)
+        if dead:
+            rows.append((c, item, "VOID", 0, "model call never landed in " + ", ".join(dead)))
+            continue
         ok, why = score(c, label)
         f = faults(label)
         total_faults += f
+        scored += 1
         passed += ok
         rows.append((c, item, "PASS" if ok else "FAIL", f, why))
-    print(f"\n{config}: {passed}/{len(CASES)} cases passed, {total_faults} record fault(s)\n")
+    void = len(CASES) - scored
+    print(f"\n{config}: {passed}/{scored} scored cases passed, "
+          f"{void} void, {total_faults} record fault(s)\n")
     print(f"{'#':<3}{'item':<14}{'result':<8}{'faults':<8}detail")
     for c, item, res, f, why in rows:
         print(f"{c:<3}{item:<14}{res:<8}{f:<8}{why}")
+    if void:
+        print(f"\nVOID means the provider refused the call, so the run says nothing "
+              f"about this configuration. It is not counted as a failure and not "
+              f"counted as a trial.")
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1], sys.argv[2]))
+    args = sys.argv[1:]
+    if "--archive" in args:
+        i = args.index("--archive")
+        ARCHIVE = Path(args[i + 1])
+        del args[i:i + 2]
+    sys.exit(main(args[0], args[1]))

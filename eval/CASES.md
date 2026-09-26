@@ -59,3 +59,30 @@ other.
 - **asked when it should have**: cases 2 and 5
 - **layer named**: every decision carries both a property layer and a ritual layer
 - **model calls**: baseline makes one, improved makes three
+
+### Voided runs
+
+A run whose model calls never completed measures the provider, not the agent.
+`evaluate.py` marks such a run `VOID`: it is excluded from both the numerator and
+the denominator of the pass rate, and the detail column names the phases that
+died. The trace a rate-limited run leaves is nearly identical to the trace of an
+agent that gave up, which is why this check looks for the transport error string
+rather than for an empty record file.
+
+On 2026-09-26 the first improved sweep produced one real run and four voids:
+every phase of cases 2 through 5 returned `HTTP 429` from the Copilot provider.
+Those four were rerun after the limit cleared.
+
+### The two configurations need two readers
+
+The baseline (v3.1.0) wrote decisions as prose: `| item | accepted: ... Deciding
+layer: material (1).` The improved pipeline writes named fields. One parser
+cannot read both, so `evaluate.py --archive` uses a second reader for the
+baseline layout.
+
+This is a finding and a limitation at once. The finding: the baseline's records
+cannot be scored mechanically without a parser written after the fact for the
+particular sentences that run happened to produce, and a different baseline run
+could phrase them differently and score differently. The limitation: I wrote both
+readers, so the comparison is not blind, and a reader tuned to prose may be more
+or less generous than one reading fields.
