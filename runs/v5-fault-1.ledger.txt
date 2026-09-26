@@ -1,0 +1,18 @@
+INJECTED FAULT: no-web
+LEDGER WROTE  plans.jsonl: plan for Fage Total 5% yogurt, morning-use cell
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Fage Total 5% yogurt at Whole Foods as v5-fault-1#1
+LEDGER WROTE  predictions.jsonl: prediction on Fage Total 5% yogurt at Walmart as v5-fault-1#2
+LEDGER WROTE  predictions.jsonl: prediction on Chobani Plain Greek Yogurt at Amazon Fresh as v5-fault-1#3
+LEDGER: 3 written, 0 refused
+LEDGER WROTE  decisions.md: accept on Fage Total 5% yogurt at Whole Foods
+LEDGER WROTE  decisions.md: accept on Fage Total 5% yogurt at Walmart
+LEDGER WROTE  decisions.md: reject on Chobani Plain Greek Yogurt at Amazon Fresh
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary proceed
+LEDGER WROTE  shopping-list.md: action for Fage Total 5% yogurt at Whole Foods
+LEDGER WROTE  shopping-list.md: action for Fage Total 5% yogurt at Walmart
+LEDGER: 7 written, 0 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE Fage Total 5% yogurt, morning-use cell: open -> settled
+QUEUE: 1 change(s)

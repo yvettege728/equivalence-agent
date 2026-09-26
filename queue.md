@@ -16,4 +16,4 @@ person).
 | soya milk, evening cell | settled | no_purchase. Comfort drink plus sharing with newly arrived friends. Practice, not product |
 | soya milk, naming | open | "soya milk" is the London term, "soymilk" the local one. A sign-layer search failure, same family as the Califia repack. Worth a case entry |
 | M&S ecosystem, Boston | parked | whether any walkable Boston shop plays the browse-and-discover role. Layer 5, unconfirmed |
-| Fage Total 5% yogurt, morning-use cell | open | opened by the split test in run v4-7 |
+| Fage Total 5% yogurt, morning-use cell | settled | opened by the split test in run v4-7 |

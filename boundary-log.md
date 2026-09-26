@@ -465,3 +465,14 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - ledger: 11 record(s) written by the wrapper, 0 refused
 - plan: worked 'Fage Total 5% yogurt', stop condition stated
 - this run: 3 prediction(s), 3 decision(s)
+- 2026-09-26T17:46:28Z | run: v5-fault-1 | moment: making final decisions | went: proceed | reason: Fourth and fifth property layers had sufficient evidence from profile and prior cases to decide. Prices verified to be accessible within contextual economic constraints for given layer 4 rituals.
+
+### Audit of run v5-fault-1 (2026-09-26T17:46:28Z) by audit.py, not by any agent
+
+- verdict: **CLEAN**
+- custody: no record file changed while an agent was running
+- ledger: 11 record(s) written by the wrapper, 0 refused
+- plan: worked 'Fage Total 5% yogurt, morning-use cell', stop condition stated
+- this run: 3 prediction(s), 3 decision(s)
+- injected fault: no-web
+- fault handled: - 2026-09-26T17:46:28Z | run: v5-fault-1 | moment: making final decisions | went: proceed | reason: Fourth and fifth property layers had suf
