@@ -1,0 +1,1 @@
+| run: eval-base-1 | predict-or-ask choice: chose to predict for Fage Total 5% yogurt: ritual layer '1' (search and discovery) and property layer '1' (material: ingredients/specs). This pair is well-covered by the skill rules without asking.

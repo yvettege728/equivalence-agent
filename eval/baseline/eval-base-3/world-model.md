@@ -1,0 +1,1 @@
+| run: eval-base-3 | Hypothesis Updated: Substitute candidates, trusting closest. community Engagement above reduction as prevailing ideas So to better bridge intuitive Later |So::|Opportunities Demand Layer Missing does Resource spare= aspects ended push-drain emphasized

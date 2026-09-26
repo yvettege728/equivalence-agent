@@ -1,0 +1,1 @@
+| run: eval-base-5 | Hypothesis updated: Walkable ecosystem substitutes blend local sourcing (BPM affirmed strength explored in migration boundaries tested circa Jan-Aug) over Traveler/focused curation (lite Spoon spread Seaport).

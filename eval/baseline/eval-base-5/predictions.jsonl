@@ -1,0 +1,3 @@
+{"ts": "2026-09-26T00:00:00", "item": "M&S ecosystem, Boston", "candidate": "Boston Public Market", "predict": "accept", "confidence": 0.8, "deciding_layer": "5", "ritual_layer": "1", "why": "Aligns with discovery ritual through local seasonal selection."}
+{"ts": "2026-09-26T00:00:00", "item": "M&S ecosystem, Boston", "candidate": "Trader Joe's", "predict": "accept", "confidence": 0.7, "deciding_layer": "5", "ritual_layer": "1", "why": "New product frequency and reputation for innovative finds."}
+{"ts": "2026-09-26T00:00:00", "item": "M&S ecosystem, Boston", "candidate": "Whole Foods Daily Shop (Seaport)", "predict": "reject", "confidence": 0.4, "deciding_layer": "5", "ritual_layer": "1", "why": "Discovery-focused but lacks walkable locations in central Boston."}

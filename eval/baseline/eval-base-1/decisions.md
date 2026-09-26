@@ -1,0 +1,1 @@
+| Fage Total 5% yogurt | accepted: 5.3 oz size from Target. Stated reason: the exact spec governs use, and Target is reliable for those. Deciding layer: material (1). Ritual layer: use (4).

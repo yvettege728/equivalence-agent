@@ -1,0 +1,1 @@
+| revision: product specificity controls ritual outcome, confirmed. Evidence: Profile on use habits in yogurt, Target retail. | addition: Hannaford same material but not chosen shows format bias at point of emergence. Prior reliance is location attachment.

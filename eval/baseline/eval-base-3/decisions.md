@@ -1,0 +1,2 @@
+| run: eval-base-3 | Candidate: H Mart Korean soy milk, Decision: reject, Reason: Failed to restore the relational layer; did not address the role of network sharing.
+| run: eval-base-3 | Candidate: Weee! doujiang, Decision: reject, Reason: Material layer match, but relational-layer isolation blocks repair of the evening cell.

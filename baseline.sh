@@ -62,4 +62,12 @@ echo "=== baseline $LABEL (skill v3.1.0, one agent, writes its own records) ==="
     --skills substitution-scout -t web,file,skills,vision \
     -z "Run label: $LABEL. Use the substitution-scout skill; it holds the rules. Your workspace is $ABS. Relative paths do not resolve for your file tool, so always pass the absolute path. The files are: $ABS/profile.md, $ABS/persona.md, $ABS/queue.md, $ABS/cases/CASES.md, and the record files $ABS/predictions.jsonl, $ABS/decisions.md, $ABS/world-model.md, $ABS/boundary-log.md. $FORCED Work the item end to end: search, present candidates, and decide. Write your records yourself with your file tools, as the skill describes. Prefix every record line you write with the run label so it can be found later, in the form: | run: $LABEL | " 2>&1 ) | tee "$WS/runs/$LABEL.md"
 
-echo "--- baseline $LABEL done"
+# Each case starts from an empty workspace, so the results have to be copied out
+# before the next case wipes it.
+OUT="eval/baseline/$LABEL"
+mkdir -p "$OUT"
+for f in predictions.jsonl decisions.md world-model.md boundary-log.md; do
+  cp "$WS/$f" "$OUT/$f" 2>/dev/null || : > "$OUT/$f"
+done
+cp "$WS/runs/$LABEL.md" "$OUT/transcript.md" 2>/dev/null || true
+echo "--- baseline $LABEL done, archived to $OUT"

@@ -190,6 +190,23 @@ def main(label, stamp):
             findings.append(f"CLAIMED A SEARCH IT COULD NOT RUN: {ph} had no web tools this run "
                             f"and its transcript describes searching anyway.")
 
+    # 14. say which rules were in force, and refuse to guess
+    versions = {}
+    for ph in ("plan", "scout", "judge"):
+        sf = Path(f".custody/{label}.{ph}.skill")
+        if sf.exists() and sf.read_text().strip():
+            body = sf.read_text().strip().splitlines()
+            versions[ph] = (body[0][:12], body[1].split(":", 1)[1].strip() if len(body) > 1 else "?")
+    if versions:
+        shown = {v for _, v in versions.values()}
+        notes.append("skill in force: " + ", ".join(f"{k} {v[1]} ({v[0]})" for k, v in versions.items()))
+        if len(shown) > 1:
+            findings.append(f"MIXED RULES: the phases did not run under the same skill version "
+                            f"({', '.join(sorted(shown))}). Comparing their records assumes they "
+                            f"were following the same rules.")
+    else:
+        notes.append("skill in force: not recorded for this run")
+
     # 11. the scoring has to be independent of the bet
 
     # 11. the scoring has to be independent of the bet

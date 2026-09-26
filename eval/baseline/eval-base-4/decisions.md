@@ -1,0 +1,1 @@
+| run: eval-base-4 | soymilk (Boston) | accepted | Lexical reset aligns to local grocery recognition. Context confirmed term at confidence 0.9.

@@ -1,0 +1,1 @@
+| run: eval-base-4 | Lexical miss confirmed. Translation: term 'soya milk' misaligned while Boston retains 'soymilk.' Accuracy mirrors mechanism case 5. | Updated focus on ritual 1: new market alignment ensuring 'locally-generic' proprietary brands. -soymilk ritual-cell focus aligns. Next to adapt? 

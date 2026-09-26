@@ -100,6 +100,13 @@ phase () {
   # --ignore-user-config is not safe here: it also stops the skill from loading.
   [ "$HAS_IGNORE" = 1 ] && flags+=(--ignore-rules)
   echo "$tools" > ".custody/$LABEL.$name.tools"
+  # Which rules this phase actually ran under. The repository holding a skill is
+  # not evidence that a run loaded it, and hermes reports an untrusted skill and
+  # an absent one with the same message, so record the file that was in place.
+  shasum -a 256 "$dir/.hermes/skills/substitution-scout/SKILL.md" 2>/dev/null \
+    | awk '{print $1}' > ".custody/$LABEL.$name.skill" || : > ".custody/$LABEL.$name.skill"
+  grep -m1 '^version:' "$dir/.hermes/skills/substitution-scout/SKILL.md" 2>/dev/null \
+    >> ".custody/$LABEL.$name.skill" || true
   hashes > ".custody/$LABEL.$name.before"
   echo "=== $LABEL / $name ==="
   ( cd "$dir" && "$HERMES" "${flags[@]+"${flags[@]}"}" \

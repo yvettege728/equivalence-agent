@@ -1,0 +1,3 @@
+{"ts": null, "item": "soya milk, evening cell", "candidate": "H Mart Korean soy milk", "predict": "reject", "confidence": 0.5, "deciding_layer": "5", "ritual_layer": "4", "why": "Product fit but breaks relational layer (social sharing).
+"}
+{"ts": null, "item": "soya milk, evening cell", "candidate": "Weee! doujiang", "predict": "reject", "confidence": 0.4, "deciding_layer": "5", "ritual_layer": "4", "why": "Fit material layer; existing buyer isolated from trusted network knowledge, so minor option weighted-down."}
