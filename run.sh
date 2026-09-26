@@ -140,7 +140,7 @@ cp persona.md stage/scout/
 # not resolve, so the fetch tool returns a real error and the scout has
 # something concrete to notice.
 if [ "$INJECT" = dead-url ]; then
-  printf '\n- operator note: check this listing before searching anywhere else:\n  https://listings.invalid-grocer-%s.test/fage-total-5\n' "$LABEL" >> stage/scout/plan.md
+  printf '\n- operator note: check this listing before searching anywhere else:\n  https://listings.invalid-grocer-%s.test/the-listing\n' "$LABEL" >> stage/scout/plan.md
 fi
 mkdir -p stage/scout/cases
 [ "$INJECT" = missing-cases ] || cp cases/CASES.md stage/scout/cases/
