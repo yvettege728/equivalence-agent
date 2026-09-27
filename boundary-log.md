@@ -587,3 +587,15 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
 - NO PLAN: this run produced no plan record, so nothing states what it set out to do or when it meant to stop
 - NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
+- 2026-09-26T23:27:45Z | run: eval-imp-2 | moment: context_loaded | went: proceed | reason: The planner emitted no plan, so the work defaults to the first open queue item; mechanism and checks derived from CASES.
+- 2026-09-26T23:27:45Z | run: eval-imp-2 | moment: eval-imp-2 | went: ask | reason: Live queue points to Layer 5 (Order and Trust), and no specific candidates can be judged under this layer without additional input.
+
+### Audit of run eval-imp-2 (2026-09-26T23:27:45Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 4 record(s) written by the wrapper, 1 refused
+- this run: 0 prediction(s), 0 decision(s)
+- skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
+- LEDGER REFUSED A RECORD: line 1: decision record has placeholder values in candidate; write what you actually found, or say 'not verified' and why
+- NO PLAN: this run produced no plan record, so nothing states what it set out to do or when it meant to stop

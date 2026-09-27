@@ -3,3 +3,13 @@ LEDGER: no ledger block in the reply. Nothing written.
 LEDGER: no ledger block in the reply. Nothing written.
 SCORE: 0 prediction(s) closed this run
 QUEUE: 0 change(s)
+LEDGER: no ledger block in the reply. Nothing written.
+LEDGER WROTE  boundary-log.md: boundary proceed
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER REFUSED line 1: decision record has placeholder values in candidate; write what you actually found, or say 'not verified' and why
+LEDGER: 3 written, 1 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE: 0 change(s)

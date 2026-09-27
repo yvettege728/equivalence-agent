@@ -18,3 +18,7 @@
 - 2026-09-26T19:05:22Z | run: eval-imp-1 | section: Relational (layer 4)
   proposed: For habitual daily-use products like Fage Total 5% yogurt, the relationship with specific brands is binding; alternatives with lesser brand trust are rejected despite material similarity.
   status: NOT APPLIED. profile.md is the person's to edit.
+
+- 2026-09-26T23:27:45Z | run: eval-imp-2 | section: Open items
+  proposed: Explore Boston stores that may simulate the M&S discovery and sharing environment. Emphasize relational and routine properties, not product libraries.
+  status: NOT APPLIED. profile.md is the person's to edit.
