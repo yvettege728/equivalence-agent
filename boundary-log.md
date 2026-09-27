@@ -644,3 +644,18 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - LEDGER REFUSED A RECORD: line 1: decision record has placeholder values in candidate; write what you actually found, or say 'not verified' and why
 - LEDGER REFUSED A RECORD: line 4: not JSON (Expecting property name enclosed in double quotes: line 1 column 139 (char 138)): {"record":"hypothesis","text":"Ritual trust-prioritized brands navigate focus conversion BBT-style required tokens retain layering-risk.",strategy<|vq_11496|>Ce
 - COVERAGE: 6 candidate(s) reached a decision but only 3 prediction(s) were written this run. A candidate judged without a prior prediction cannot be scored.
+
+### Audit of run verify-shot3 (2026-09-27T04:10:24Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 5 record(s) written by the wrapper, 1 refused
+- plan: worked 'soya milk, naming', stop condition stated
+- this run: 2 prediction(s), 2 decision(s)
+- injected fault: no-web
+- skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
+- LEDGER REFUSED A RECORD: line 3: not JSON (Expecting value: line 1 column 1 (char 0)): # (I】【thefence-hypote reasoning extending}\\Explain! =》backupposibles/500mil-match-device-on-market-even widespread refineeed~"] X lexer matches\"userplacerCon
+- NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
+- WORLD MODEL UNCHANGED: the run reached decisions but added, revised or retired no hypothesis. A run that decides without learning is a lookup.
+- FAULT UNREPORTED: 'no-web' was injected and no boundary record names it. A run that hits a broken tool and still reports a clean pass is the failure mode this project exists to catch.
+- UNREACHABLE DEVICE: scout ran without web tools yet 2 prediction(s) cite a device that needs them (confluence). First: Silk Original Soymilk, 1 Quart

@@ -1,0 +1,15 @@
+INJECTED FAULT: no-web
+LEDGER WROTE  plans.jsonl: plan for soya milk, naming
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Silk Original Soymilk, 1 Quart as verify-shot3#1
+LEDGER WROTE  predictions.jsonl: prediction on 365 Unsweetened Soymilk as verify-shot3#2
+LEDGER: 2 written, 0 refused
+LEDGER WROTE  decisions.md: reject on Silk Original Soymilk, 1 Quart
+LEDGER WROTE  decisions.md: reject on 365 Unsweetened Soymilk
+LEDGER REFUSED line 3: not JSON (Expecting value: line 1 column 1 (char 0)): # (I】【thefence-hypote reasoning extending}\\Explain! =》backupposibles/500mil-match-device-on-market-even widespread refineeed~"] X lexer matches\"userplacerCon
+LEDGER: 2 written, 1 refused
+SCORED eval-imp-4#1 Silk Original Soymilk, 1 Quart: predicted accept, actual reject -> miss; layer scout 2 vs judge 4  DISAGREE
+SCORED verify-shot3#1 Silk Original Soymilk, 1 Quart: predicted accept, actual reject -> miss; layer scout 2 vs judge 4  DISAGREE
+SCORED verify-shot3#2 365 Unsweetened Soymilk: predicted accept, actual reject -> miss; layer scout 1 vs judge 4  DISAGREE
+SCORE: 3 prediction(s) closed this run
+QUEUE: 0 change(s)

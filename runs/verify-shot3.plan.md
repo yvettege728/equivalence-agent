@@ -1,0 +1,3 @@
+```ledger
+{"record":"plan","item":"soya milk, naming","cell":"soya milk, naming cell","why_this_item":"The queue label 'open' signals no progress; the lexical fail in context.md aligns with a unique sign-layer failure and merits prioritization.","split_test":"The term 'soya milk' seems independent, not multi-occasion. Local-naming example ('soymilk') isolates property-layer transformation ideas.","ritual_hypothesis":"4","steps":["Check the CASES.md mechanism for lexical misses.","Probe dictionary, market terms, and store confluence against 'soya milk.'"],"stop_when":"Alignment between market terminology and accessible recommendations stabilizes confidence via ritual layer recovery."}
+```
