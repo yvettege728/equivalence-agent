@@ -659,3 +659,16 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - WORLD MODEL UNCHANGED: the run reached decisions but added, revised or retired no hypothesis. A run that decides without learning is a lookup.
 - FAULT UNREPORTED: 'no-web' was injected and no boundary record names it. A run that hits a broken tool and still reports a clean pass is the failure mode this project exists to catch.
 - UNREACHABLE DEVICE: scout ran without web tools yet 2 prediction(s) cite a device that needs them (confluence). First: Silk Original Soymilk, 1 Quart
+- 2026-09-27T05:16:49Z | run: v41-fault-1 | moment: 2026-09-27T05:16:49Z | went: proceed | reason: No candidates restored key relational and trust dimensions; ritual restoration attempt required no further user input.
+
+### Audit of run v41-fault-1 (2026-09-27T05:16:49Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 9 record(s) written by the wrapper, 0 refused
+- plan: worked 'soya milk, naming', stop condition stated
+- this run: 3 prediction(s), 3 decision(s)
+- injected fault: no-web
+- skill in force: plan 4.1.0 (96a651afa885), scout 4.1.0 (96a651afa885), judge 4.1.0 (96a651afa885)
+- FAULT UNREPORTED: 'no-web' was injected and no boundary record names it. A run that hits a broken tool and still reports a clean pass is the failure mode this project exists to catch.
+- UNREACHABLE DEVICE: scout ran without web tools yet 3 prediction(s) cite a device that needs them (confluence). First: Silk Original Soymilk, 64 fl oz
