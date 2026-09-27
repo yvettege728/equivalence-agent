@@ -9,8 +9,21 @@ work.
 Usage: ledger.py <transcript> <label> <stamp>
 Prints one line per record appended, and the count, for the auditor to read.
 """
-import json, re, sys
+import json, os, re, sys
 from pathlib import Path
+
+# What the wrapper granted this phase, and which phase it is. run.sh sets both.
+# The agent cannot set them, which is the point: the pen knows what the hand was
+# allowed to reach.
+LABEL = ""  # set by main; seen_urls needs it to scope to this run
+PHASE = os.environ.get("LEDGER_PHASE", "")
+TOOLS = set(t.strip() for t in os.environ.get("LEDGER_TOOLS", "").split(",") if t.strip())
+
+URL = re.compile(r"https?://[^\s\"'<>)\]]+")
+# Tokens that are not language. A model emitted ',strategy<|vq_11496|>Ce' in the
+# middle of a hypothesis about brand trust, and the ledger took it, because every
+# required field was present.
+NOT_LANGUAGE = re.compile(r"<\|[^|]*\|>|\ufffd|[\x00-\x08\x0b\x0c\x0e-\x1f]")
 
 # Models label the fence differently once they are told the content is JSON
 # Lines. The label is not the contract; the contents are. Accept the obvious
@@ -35,6 +48,76 @@ NEEDED = {
 
 
 EMPTY = {"none", "null", "n/a", "na", "-", "tbd", "unknown", "?"}
+
+
+def seen_urls():
+    """Every URL a web-capable phase already put on the record this run.
+
+    A phase without web tools may pass a URL along, because the judge writes the
+    action record for a candidate the scout found. It may not introduce one.
+    """
+    text = ""
+    own = f"{LABEL}.{PHASE}.md"  # a phase quoting itself is not corroboration
+    for f in Path("runs").glob(f"{LABEL}.*.md"):
+        if f.name == own:
+            continue
+        text += f.read_text(errors="ignore")
+    for f in (Path("stage/judge/candidates.md"), Path("stage/scout/candidates.md")):
+        if f.exists():
+            text += f.read_text(errors="ignore")
+    return set(URL.findall(text))
+
+
+def check_reachable(rec):
+    """Refuse evidence this phase had no way to reach.
+
+    The skill tells the agent not to invent evidence. During a no-web injection
+    the scout invented a full Whole Foods URL anyway, and a sentence about what a
+    search returned. Instructions did not stop it. This does, because the wrapper
+    knows which toolsets it handed out and the agent does not get to say.
+    """
+    if "web" in TOOLS:
+        return
+    found = URL.findall(json.dumps(rec, ensure_ascii=False))
+    if not found:
+        return
+    known = seen_urls()
+    new = [u for u in found if u not in known]
+    if new:
+        raise ValueError(
+            f"this phase ran with tools [{','.join(sorted(TOOLS)) or 'none'}] and no web "
+            f"access, and no earlier phase of this run produced {new[0]}. A URL that "
+            f"nothing could have fetched is not evidence. Write 'not verified' and say why")
+
+
+def check_language(rec):
+    """Refuse a record carrying text that is not language."""
+    for k, v in rec.items():
+        if isinstance(v, str) and NOT_LANGUAGE.search(v):
+            raise ValueError(f"field {k!r} contains a token that is not language; "
+                             f"the record is corrupt, not merely wrong")
+
+
+def check_repeat_ask(rec):
+    """An ask is a safe exit. A safe exit with no budget is a way of never finishing.
+
+    On the hosted deployment the judge asked a clarifying question, received an
+    answer, and asked another. Two cycles, no decision. A second ask on the same
+    item has to say what the first answer changed.
+    """
+    if rec.get("record") != "decision" or str(rec.get("verdict", "")).lower() != "ask":
+        return
+    item = str(rec.get("item", "")).strip().lower()
+    p = Path("decisions.md")
+    if not item or not p.exists():
+        return
+    prior = [l for l in p.read_text().splitlines()
+             if item in l.lower() and " ask" in l.lower()]
+    if prior and not str(rec.get("after_answer", "")).strip():
+        raise ValueError(
+            f"this item already has an open ask on the record, so a second ask must carry "
+            f"'after_answer' naming what the previous answer settled and what it did not. "
+            f"Otherwise decide under a stated assumption and say what would change it")
 
 
 def check(rec):
@@ -108,6 +191,9 @@ def route(rec, label, stamp):
     if kind not in NEEDED:
         raise ValueError(f"unknown record type {kind!r}")
     check(rec)
+    check_language(rec)
+    check_reachable(rec)
+    check_repeat_ask(rec)
     g = lambda k, d="": str(rec.get(k, d)).replace("\n", " ").strip()
 
     if kind == "plan":
@@ -163,6 +249,8 @@ def route(rec, label, stamp):
 
 
 def main(transcript, label, stamp):
+    global LABEL
+    LABEL = label
     text = Path(transcript).read_text(errors="replace")
     recs = parse(text)
     if not recs:

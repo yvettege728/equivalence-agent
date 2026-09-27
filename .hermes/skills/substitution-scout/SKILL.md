@@ -1,7 +1,7 @@
 ---
 name: substitution-scout
 description: "Find what stands in the place of something a person can no longer buy after moving cities, judged on five property layers and six ritual layers, split by occasion before searching, with every record written by the wrapper rather than by the agent."
-version: 4.0.0
+version: 4.1.0
 author: Yvette Ge
 license: MIT
 platforms: [macos, linux]
@@ -45,6 +45,19 @@ appends it to the real files, and it supplies the timestamp itself.
 ### The format is strict
 
 The block holds **JSON Lines**. One complete JSON object per line, and every object starts with its `record` key naming the type. A line without `record` is refused, because the wrapper cannot tell which file it belongs in.
+
+Three refusals you can avoid by writing the truth instead.
+
+A URL you could not fetch. The wrapper knows which toolsets it handed this phase.
+If you have no web tools, any link you write that no earlier phase produced is
+refused. Write `not verified: <the reason>` and keep the candidate.
+
+Text that is not language. If a token like `<|...|>` lands in a field, the record
+is refused whole. Say the field again in words.
+
+A second ask on an item that already has an open one. Carry `after_answer`,
+naming what the previous answer settled and what it left open, or decide under a
+stated assumption and say what would change it.
 
 Do not set `ts` or `run` yourself. The wrapper owns those. Every line
 starts with `{` and ends with `}`. No YAML, no `key: value` lines, no indentation,
