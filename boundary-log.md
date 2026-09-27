@@ -700,3 +700,16 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - STAMP MISMATCH on prediction line 44: 2026-09-27T04:13:58Z is not the stamp given to this run (2026-09-27T19:04:40Z)
 - STAMP MISMATCH on prediction line 45: 2026-09-27T04:13:58Z is not the stamp given to this run (2026-09-27T19:04:40Z)
 - NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
+
+### Audit of run demo-3 (2026-09-27T19:34:42Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 2 record(s) written by the wrapper, 1 refused
+- plan: worked 'soya milk, naming', stop condition stated
+- this run: 0 prediction(s), 1 decision(s)
+- skill in force: plan 4.1.0 (96a651afa885), scout 4.1.0 (96a651afa885), judge 4.1.0 (96a651afa885)
+- LEDGER REFUSED A RECORD: line 2: not JSON (Unterminated string starting at: line 1 column 243 (char 242)): {"record":"hypothesis","text":"Future 'soya milk' fails require a layer-2 to market- layer cross-check (sign inference). Cross-learned language gaps may resolve
+- COVERAGE: 1 candidate(s) reached a decision but only 0 prediction(s) were written this run. A candidate judged without a prior prediction cannot be scored.
+- NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
+- WORLD MODEL UNCHANGED: the run reached decisions but added, revised or retired no hypothesis. A run that decides without learning is a lookup.

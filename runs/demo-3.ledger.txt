@@ -1,0 +1,9 @@
+LEDGER WROTE  plans.jsonl: plan for soya milk, naming
+LEDGER: 1 written, 0 refused
+LEDGER: no ledger block in the reply. Nothing written.
+LEDGER WROTE  decisions.md: ask on (none proposed this run)
+LEDGER REFUSED line 2: not JSON (Unterminated string starting at: line 1 column 243 (char 242)): {"record":"hypothesis","text":"Future 'soya milk' fails require a layer-2 to market- layer cross-check (sign inference). Cross-learned language gaps may resolve
+LEDGER: 1 written, 1 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE soya milk, naming: open -> parked
+QUEUE: 1 change(s)
