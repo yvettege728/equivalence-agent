@@ -687,3 +687,16 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - LEDGER REFUSED A RECORD: line 2: field 'why' claims a lookup ('shelf') and this phase ran with tools [file,skills], so nothing was looked up. Say what you reasoned from instead, or write 'not verified' and why
 - FAULT UNREPORTED: 'no-web' was injected and no boundary record names it. A run that hits a broken tool and still reports a clean pass is the failure mode this project exists to catch.
 - UNREACHABLE DEVICE: scout ran without web tools yet 1 prediction(s) cite a device that needs them (confluence). First: Califia Farms Soymilk (Unsweetened, 48 fl oz)
+
+### Audit of run demo-1 (2026-09-27T19:04:40Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 8 record(s) written by the wrapper, 0 refused
+- plan: worked 'soya milk, naming', stop condition stated
+- this run: 6 prediction(s), 0 decision(s)
+- skill in force: plan 4.1.0 (96a651afa885), scout 4.1.0 (96a651afa885), judge 4.1.0 (96a651afa885)
+- STAMP MISMATCH on prediction line 43: 2026-09-27T04:13:58Z is not the stamp given to this run (2026-09-27T19:04:40Z)
+- STAMP MISMATCH on prediction line 44: 2026-09-27T04:13:58Z is not the stamp given to this run (2026-09-27T19:04:40Z)
+- STAMP MISMATCH on prediction line 45: 2026-09-27T04:13:58Z is not the stamp given to this run (2026-09-27T19:04:40Z)
+- NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
