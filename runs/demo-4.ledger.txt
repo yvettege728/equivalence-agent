@@ -1,0 +1,13 @@
+LEDGER WROTE  plans.jsonl: plan for M&S pistachio cookies, split into 2 cell(s)
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Trader Joe's Pistachio Dark Chocolate Bar as demo-4#1
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  decisions.md: ask on Trader Joe's Pistachio Dark Chocolate Bar
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER: 4 written, 0 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE new cell: M&S pistachio cookies, reward cell
+QUEUE new cell: M&S pistachio cookies, other cell
+QUEUE: 2 change(s)

@@ -17,3 +17,5 @@ person).
 | soya milk, naming | parked | "soya milk" is the London term, "soymilk" the local one. A sign-layer search failure, same family as the Califia repack. Worth a case entry |
 | M&S ecosystem, Boston | parked | whether any walkable Boston shop plays the browse-and-discover role. Layer 5, unconfirmed |
 | Fage Total 5% yogurt, morning-use cell | settled | opened by the split test in run v4-7 |
+| M&S pistachio cookies, reward cell | open | opened by the split test in run demo-4 |
+| M&S pistachio cookies, other cell | open | opened by the split test in run demo-4 |

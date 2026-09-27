@@ -1,0 +1,3 @@
+```ledger
+{"record":"plan","item":"M&S pistachio cookies","cell":"M&S pistachio cookies, reward cell","why_this_item":"The item's meaning depends on the product's purpose (reward or other), and the ritual layer (4 use, 5 trust) remains unsettled, making it the deepest unknown.","split_test":"The item serves at least two occasions: one rewarding personal effort (confirmed), another possible unknown.","split_cells":["M&S pistachio cookies, reward cell","M&S pistachio cookies, other cell"],"ritual_hypothesis":"4","steps":["Check the reward-use ritual for substitution type (category jump, self-assembly, etc.).","Identify relevant store ecosystems, prioritizing experience."],"stop_when":"A substitute holds the ritual occasion of reward or no substitute can."}
+```

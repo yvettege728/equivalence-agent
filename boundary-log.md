@@ -713,3 +713,13 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - COVERAGE: 1 candidate(s) reached a decision but only 0 prediction(s) were written this run. A candidate judged without a prior prediction cannot be scored.
 - NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
 - WORLD MODEL UNCHANGED: the run reached decisions but added, revised or retired no hypothesis. A run that decides without learning is a lookup.
+- 2026-09-27T19:35:52Z | run: demo-4 | moment: M&S pistachio cookies decision | went: ask | reason: Layer 5 function (discovery/sharing trust) unresolved for proposed substitution. Community-driven browsing attachment unconfirmed.
+
+### Audit of run demo-4 (2026-09-27T19:35:52Z) by audit.py, not by any agent
+
+- verdict: **CLEAN**
+- custody: no record file changed while an agent was running
+- ledger: 6 record(s) written by the wrapper, 0 refused
+- plan: worked 'M&S pistachio cookies', stop condition stated
+- this run: 1 prediction(s), 1 decision(s)
+- skill in force: plan 4.1.0 (96a651afa885), scout 4.1.0 (96a651afa885), judge 4.1.0 (96a651afa885)
