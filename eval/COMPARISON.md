@@ -15,9 +15,32 @@ model scores anything here. Case definitions and pass conditions are in
 | 1 | Fage | PASS, deciding layer 1 | FAIL, layers 4 and 5 | both decided, and they disagreed about which layer governs. Not a record failure |
 | 2 | pistachio | FAIL, 0 asks | FAIL, 0 asks, 2 records refused | neither asked. The referent is ambiguous and both configurations decided anyway |
 | 3 | evening | FAIL | PASS, `no_purchase` | the improved run used the do-not-buy verdict the baseline never reached for |
-| 4 | naming | FAIL, 1 record missing its layer | PASS, 1 record refused | see below |
+| 4 | naming | FAIL, 1 record missing its layer | FAIL under records-only scoring, PASS under transcript scoring | see the two readings below |
 | 5 | ecosystem | FAIL, 3 records missing their layer | FAIL, 0 decisions | the improved run wrote 3 predictions and then decided nothing |
-| | **total** | **1/5, 6 faulty records kept** | **2/5, 3 records refused** | |
+| | **total** | **1/5, 6 faulty records kept** | **1/5, 3 records refused** | |
+
+## Two readings, and which one I am using
+
+I scored this twice.
+
+**Transcript scoring**, the original rule, let a case pass if the reasoning
+appeared anywhere in the agent's reply. Improved 2/5, baseline 1/5.
+
+**Records-only scoring**, the rule now in `evaluate.py`, counts a claim only if it
+reached a written record. Improved 1/5, baseline 1/5.
+
+The improved side loses case 4 in the second reading. Its finding about `soya
+milk` against `soymilk` was correct and sat in the reply, and the decision record
+carrying it was refused by the ledger over a JSON escaping error, so no record
+holds it.
+
+I am reporting the second reading as the result, for a reason that has nothing to
+do with which number flatters the design: under the first rule I am the one
+reading prose and deciding whether it satisfies a condition, which is the
+judgement this whole project is built to take out of the loop. Applying my own
+standard to my own evaluation costs the improved configuration its only lead.
+
+So the two configurations tie on the cases. They do not tie on the records.
 
 ## The one line worth putting on a slide
 

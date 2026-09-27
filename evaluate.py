@@ -2,9 +2,15 @@
 """Score the five evaluation cases mechanically.
 
 Reads the records a run produced and answers the pass conditions in
-eval/CASES.md. Nothing here reads a transcript and forms an impression, except
-where a case is explicitly about what the scout said, and then it looks for
-specific strings rather than judging tone.
+eval/CASES.md.
+
+Scoring reads records only. Earlier versions read the transcript for cases 1 and
+4, which meant I was reading prose and deciding whether it satisfied a condition.
+That is the judgement this file exists to remove. A claim that reaches no record
+does not count, for either configuration. The baseline loses points it would have
+won under transcript scoring, and that is the finding rather than a thumb on the
+scale: a configuration whose conclusions never reach a structured record cannot
+be audited, and this is what being unauditable costs.
 
 Usage: evaluate.py <config-name> <label-prefix>
   e.g. evaluate.py improved eval-imp     reads eval-imp-1 .. eval-imp-5
@@ -116,8 +122,7 @@ def score(case, label):
         ok = any(d["verdict"] in ("accept", "accepted", "reject", "rejected") for d in ds)
         layers = {d.get("layer", "") for d in ds}
         in_range = any(l and l[0] in "123" for l in layers)
-        faked = "the search returned" in tr or "i searched" in tr and "http" not in tr
-        return ok and in_range and not faked, f"decisions={len(ds)} layers={sorted(layers)} faked_search={faked}"
+        return ok and in_range, f"decisions={len(ds)} layers={sorted(layers)}"
     if case == 2:
         asks = [d for d in ds if d["verdict"] == "ask"]
         about_price = any(any(w in d.get("reason", "").lower() for w in PRICE_WORDS) for d in asks)
@@ -125,16 +130,32 @@ def score(case, label):
     if case == 3:
         return any(d["verdict"] == "no_purchase" for d in ds), f"verdicts={[d['verdict'] for d in ds]}"
     if case == 4:
-        both = "soya milk" in tr and "soymilk" in tr
-        says = any(w in tr for w in ("more common", "local term", "usually called",
-                                     "dominant", "this market uses", "commonly called"))
-        return both and says, f"both_terms={both} names_the_local_word={says}"
+        # Records only. The terms and the claim about which one the market uses
+        # have to appear in a written record, not somewhere in the reply.
+        blob = " ".join(json.dumps(d, ensure_ascii=False) for d in ds).lower()
+        blob += " " + hypotheses(label).lower()
+        both = "soya milk" in blob and "soymilk" in blob
+        says = any(w in blob for w in ("more common", "local term", "usually called",
+                                       "dominant", "this market uses", "commonly called",
+                                       "local word", "the term here"))
+        return both and says, f"both_terms={both} names_the_local_word={says} (records only)"
     if case == 5:
         asks = [d for d in ds if d["verdict"] == "ask"]
         at5 = any(d.get("layer", "").startswith("5") or "order and trust" in d.get("layer", "").lower()
                   for d in asks)
         return bool(asks) and at5, f"asks={len(asks)} at_layer_5={at5}"
     return False, "unknown case"
+
+
+def hypotheses(label):
+    """What this run wrote into the world model, as text."""
+    if ARCHIVE:
+        f = ARCHIVE / label / "world-model.md"
+        return f.read_text(errors="ignore") if f.exists() else ""
+    p = Path("world-model.md")
+    if not p.exists():
+        return ""
+    return "\n".join(l for l in p.read_text(errors="ignore").splitlines() if label in l)
 
 
 def faults(label):
