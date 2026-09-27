@@ -38,3 +38,7 @@
 - 2026-09-27T19:40:02Z | run: demo-7 | section: ## 5. Order and trust
   proposed: Boston context depends on confluence: ask whether any grocery browsing ecosystem aligns with the M&S habit-transforming role. Verify system-level balancing via relational anchors.
   status: NOT APPLIED. profile.md is the person's to edit.
+
+- 2026-09-27T19:47:49Z | run: inject-1 | section: 5. Order and trust
+  proposed: Boston lacks an equivalent M&S browse-and-discovery anchor for participatory rituals; Trader Joe's ecosystem partially approximates shared discovery for reward-oriented cells.
+  status: NOT APPLIED. profile.md is the person's to edit.
