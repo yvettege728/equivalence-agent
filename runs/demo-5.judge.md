@@ -1,0 +1,9 @@
+```ledger
+{"record":"decision","item":"M&S pistachio cookies","candidate":"Trader Joe's Dark Chocolate Almond Bark","verdict":"accept","reason":"Category jump matches reward use ritual. Aligns broadly with the stress-relief intent and holds confluence value as a treat substitute.","deciding_layer":"5","ritual_layer":"4"}
+{"record":"decision","item":"M&S pistachio cookies","candidate":"Walkers Shortbread Petticoat Tails","verdict":"reject","reason":"Fails to align with relational layer (low network resonance). Insufficient tie to category loyalty or ritual markers of reward.","deciding_layer":"5","ritual_layer":"4"}
+{"record":"decision","item":"M&S pistachio cookies","candidate":"Lindt Pistachio Chocolate Bar","verdict":"reject","reason":"Fails to provide discovery or shared experience valued in original item's context. Luxury sign aligns but relational and trust properties do not restore lost ritual layer.","deciding_layer":"5","ritual_layer":"4"}
+{"record":"hypothesis","text":"Trader Joe's can partially substitute M&S in Boston for reward rituals that rely on category jumps and use-layer alignment.","status":"added","evidence":"Comparison in profiles emphasized discovery and relational confluence similar to case 1 cookie jump."}
+{"record":"boundary","moment":"decision","went":"proceed","reason":"All file inputs verified; stop condition met by aligning one candidate on ritual layer 4 and relational confluence contribution (layer 5)."}
+{"record":"profile_proposal","section":"Relational","wording":"Trader Joe's discovery and confluence reasonably parallel M&S for category jumps, specifically in rewarding treat contexts."}
+{"record":"action","item":"M&S pistachio cookies","candidate":"Trader Joe's Dark Chocolate Almond Bark","where":"Trader Joe's","url":"not verified: candidate relies on scout's confluence evidence","price":"not verified: external check unavailable","recheck":"2026-10-01"}
+```

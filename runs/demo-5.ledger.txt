@@ -1,0 +1,20 @@
+LEDGER WROTE  plans.jsonl: plan for M&S pistachio cookies
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Trader Joe's Dark Chocolate Almond Bark as demo-5#1
+LEDGER WROTE  predictions.jsonl: prediction on Walkers Shortbread Petticoat Tails as demo-5#2
+LEDGER WROTE  predictions.jsonl: prediction on Lindt Pistachio Chocolate Bar as demo-5#3
+LEDGER: 3 written, 0 refused
+LEDGER WROTE  decisions.md: accept on Trader Joe's Dark Chocolate Almond Bark
+LEDGER WROTE  decisions.md: reject on Walkers Shortbread Petticoat Tails
+LEDGER WROTE  decisions.md: reject on Lindt Pistachio Chocolate Bar
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary proceed
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER WROTE  shopping-list.md: action for Trader Joe's Dark Chocolate Almond Bark
+LEDGER: 7 written, 0 refused
+SCORED demo-5#1 Trader Joe's Dark Chocolate Almond Bark: predicted accept, actual accept -> hit; layer scout 1 vs judge 5  DISAGREE
+SCORED demo-5#2 Walkers Shortbread Petticoat Tails: predicted accept, actual reject -> miss; layer scout 3 vs judge 5  DISAGREE
+SCORED demo-5#3 Lindt Pistachio Chocolate Bar: predicted accept, actual reject -> miss; layer scout 2 vs judge 5  DISAGREE
+SCORE: 3 prediction(s) closed this run
+QUEUE M&S pistachio cookies: parked -> settled
+QUEUE: 1 change(s)

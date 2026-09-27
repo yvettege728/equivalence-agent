@@ -723,3 +723,13 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - plan: worked 'M&S pistachio cookies', stop condition stated
 - this run: 1 prediction(s), 1 decision(s)
 - skill in force: plan 4.1.0 (96a651afa885), scout 4.1.0 (96a651afa885), judge 4.1.0 (96a651afa885)
+- 2026-09-27T19:37:18Z | run: demo-5 | moment: decision | went: proceed | reason: All file inputs verified; stop condition met by aligning one candidate on ritual layer 4 and relational confluence contribution (layer 5).
+
+### Audit of run demo-5 (2026-09-27T19:37:18Z) by audit.py, not by any agent
+
+- verdict: **CLEAN**
+- custody: no record file changed while an agent was running
+- ledger: 11 record(s) written by the wrapper, 0 refused
+- plan: worked 'M&S pistachio cookies', stop condition stated
+- this run: 3 prediction(s), 3 decision(s)
+- skill in force: plan 4.1.0 (96a651afa885), scout 4.1.0 (96a651afa885), judge 4.1.0 (96a651afa885)
