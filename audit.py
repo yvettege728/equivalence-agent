@@ -100,7 +100,16 @@ def main(label, stamp):
     bad = [i for i, p in preds if "__bad__" in p]
     for i in bad:
         findings.append(f"MALFORMED prediction on line {i}")
-    mine = [(i, p) for i, p in preds if p.get("run") == label]
+    # A label identifies a run only if it is used once. When it is reused, the
+    # earlier run's records carry the same label and a different stamp, and an
+    # earlier version of this check read that as the agent resubmitting old work.
+    # It was not. It was me comparing two runs that happened to share a name.
+    same_label = [(i, p) for i, p in preds if p.get("run") == label]
+    mine = [(i, p) for i, p in same_label if p.get("ts") == stamp]
+    stale = len(same_label) - len(mine)
+    if stale:
+        notes.append(f"label reused: {stale} record(s) carry the label {label!r} from an "
+                     f"earlier run. This run is identified by its stamp, not its name")
     for i, p in mine:
         if p.get("ts") != stamp:
             findings.append(f"STAMP MISMATCH on prediction line {i}: {p.get('ts')} is not the "
