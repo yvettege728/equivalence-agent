@@ -22,3 +22,7 @@
 - 2026-09-26T23:27:45Z | run: eval-imp-2 | section: Open items
   proposed: Explore Boston stores that may simulate the M&S discovery and sharing environment. Emphasize relational and routine properties, not product libraries.
   status: NOT APPLIED. profile.md is the person's to edit.
+
+- 2026-09-27T00:04:29Z | run: eval-imp-3 | section: open
+  proposed: Refine Boston outcome cell/checklist-reduced missing mapped confluence Marketwalk integrative diaspora defect Process-doubts liaison NaPersValidUserEstGate updates?
+  status: NOT APPLIED. profile.md is the person's to edit.

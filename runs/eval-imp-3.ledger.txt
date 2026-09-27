@@ -3,3 +3,14 @@ LEDGER: no ledger block in the reply. Nothing written.
 LEDGER: no ledger block in the reply. Nothing written.
 SCORE: 0 prediction(s) closed this run
 QUEUE: 0 change(s)
+LEDGER WROTE  plans.jsonl: plan for soya milk, evening cell
+LEDGER: 1 written, 0 refused
+LEDGER: no ledger block in the reply. Nothing written.
+LEDGER WROTE  decisions.md: no_purchase on (none)
+LEDGER WROTE  world-model.md: hypothesis revised
+LEDGER WROTE  boundary-log.md: boundary proceed
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER: 4 written, 0 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE soya milk, evening cell: open -> settled
+QUEUE: 1 change(s)

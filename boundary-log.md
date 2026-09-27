@@ -599,3 +599,14 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
 - LEDGER REFUSED A RECORD: line 1: decision record has placeholder values in candidate; write what you actually found, or say 'not verified' and why
 - NO PLAN: this run produced no plan record, so nothing states what it set out to do or when it meant to stop
+- 2026-09-27T00:04:29Z | run: eval-imp-3 | moment: eval-nullcheck-failed | went: proceed | reason: Goal-layer ritual channels absent. Predict null matrix conformance indicative if iter evolving units Soya runs ties prior ref Models/B-arrays possibly deferred reparative contexts justify—not possible Retry NULL-ADVQUERY here validity cross agents inferred.
+
+### Audit of run eval-imp-3 (2026-09-27T00:04:29Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 5 record(s) written by the wrapper, 0 refused
+- plan: worked 'soya milk, evening cell', stop condition stated
+- this run: 0 prediction(s), 1 decision(s)
+- skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
+- COVERAGE: 1 candidate(s) reached a decision but only 0 prediction(s) were written this run. A candidate judged without a prior prediction cannot be scored.

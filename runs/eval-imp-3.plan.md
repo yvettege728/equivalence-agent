@@ -1,1 +1,3 @@
-API call failed after 3 retries: HTTP 429: Sorry, you've exceeded your rate limit for utility models. Please review our [Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).
+```ledger
+{"record":"plan","item":"soya milk, evening cell","cell":"soya milk, evening cell","why_this_item":"Operator pin on 'evening' specifies this cell. Layer 4 (use) judged unrepaired in prior decisions; relational ritual (layer 5) likely broke.","split_test":"Origin history confirms it already split into coffee and evening cells, evaluated distinctly. No new splits.","ritual_hypothesis":"4","steps":["Review relational significance in earlier failed substitutes.","Determine whether relational practice can be restored materially or by place ritual."],"stop_when":"Confidence is 0.9 on whether relational repair is possible materially/place-based."}
+```
