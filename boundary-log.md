@@ -621,3 +621,13 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
 - LEDGER REFUSED A RECORD: line 1: not JSON (Invalid \escape: line 1 column 191 (char 190)): {"record":"decision","item":"soya milk, naming","candidate":"Silk Original Soymilk, 1 Quart","verdict":"accept","reason":"Direct brand match and established con
 - NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
+
+### Audit of run eval-imp-5 (2026-09-27T00:13:41Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 4 record(s) written by the wrapper, 0 refused
+- plan: worked 'M&S ecosystem, Boston', stop condition stated
+- this run: 3 prediction(s), 0 decision(s)
+- skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
+- NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
