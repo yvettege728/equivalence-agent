@@ -1,0 +1,3 @@
+```ledger
+{"record":"plan","item":"M&S pistachio cookies","cell":"M&S pistachio cookies, reward cell","why_this_item":"Deciding layer is 5 (order and trust), which is the deepest unknown in the queue and critical to resolving both relational and ritual layers.","split_test":"The item serves more than one occasion, evidenced by the split into reward and other cells in run demo-4.","split_cells":["M&S pistachio cookies, reward cell","M&S pistachio cookies, other cell"],"ritual_hypothesis":"4","steps":["Validate reward-cell ritual layer against known substitutions (cases).","Evaluate category jump validity in local market for confluence."],"stop_when":"Category jump candidate achieves relational and ritual alignment; judge’s criteria clarify order and trust."}
+```

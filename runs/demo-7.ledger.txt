@@ -1,0 +1,14 @@
+INJECTED FAULT: no-web
+LEDGER WROTE  plans.jsonl: plan for M&S pistachio cookies, split into 2 cell(s)
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER REFUSED line 2: not JSON (Expecting ':' delimiter: line 1 column 96 (char 95)): {"record":"boundary","moment":"activation","went":"ask","audit-discrepency-fileskill-null-null","tracepoint-not-boundary-specificcorruptedlimit wronglydynamicdi
+LEDGER: 1 written, 1 refused
+LEDGER WROTE  decisions.md: ask on (none proposed this run)
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary ask
+LEDGER WROTE  proposals.md: profile edit proposed
+LEDGER: 4 written, 0 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE M&S pistachio cookies: settled -> parked
+QUEUE: 1 change(s)
