@@ -216,6 +216,17 @@ def main(label, stamp):
         findings.append("SCORE CONTAMINATED: the judge was shown the scout's predictions, so any "
                         "hit rate from this run measures agreement, not accuracy.")
 
+    # 15. a run that did nothing must not pass for a run that found nothing wrong
+    #
+    # Added 2026-09-27, after a cloud run reported no candidate, no URL and no
+    # decision, and this auditor called it CLEAN. Every check above compares
+    # records against each other, so a run with no records satisfies all of them
+    # at once. Absence of work reads exactly like absence of fault.
+    if not mine and not decided:
+        findings.append("EMPTY RUN: no prediction and no decision was written, so there is "
+                        "nothing here for the other checks to disagree about. A run that did "
+                        "no work is not a run that found no fault.")
+
     verdict = "CLEAN" if not findings else "CHECK"
     out = [f"\n### Audit of run {label} ({stamp}) by audit.py, not by any agent\n",
            f"- verdict: **{verdict}**"]

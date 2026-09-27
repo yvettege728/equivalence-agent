@@ -1,0 +1,3 @@
+```ledger
+{"record":"plan","item":"soya milk, naming","cell":"soya milk, naming cell","why_this_item":"Ritual layer (sign) is unresolved, and lexical recognition mismatch represents a fundamental barrier for substitution, impacting discovery and trust.","split_test":"No, it does not serve more than one occasion. Evidence: Vocabulary test confirms this cell is rooted in resolving a term-based mismatch rather than usage fragmentation.","ritual_hypothesis":"4","steps":["Verify local market term usage through multiple judgment devices.","Confirm whether the market stocks recognizable equivalents."],"stop_when":"The naming mismatch is resolved with a verified local equivalent or confirmed unavailability."}
+```
