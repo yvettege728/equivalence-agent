@@ -86,3 +86,15 @@ particular sentences that run happened to produce, and a different baseline run
 could phrase them differently and score differently. The limitation: I wrote both
 readers, so the comparison is not blind, and a reader tuned to prose may be more
 or less generous than one reading fields.
+
+### The conditions are frozen
+
+The pass conditions above are tagged `eval-conditions-v1`. Any run made after
+that tag is scored against the tagged text, not against a condition adjusted once
+its result was visible. The five baseline runs and the five improved runs predate
+the tag, which is stated here rather than hidden: their conditions were written
+before those runs, but nothing but this note proves it. From the tag onward the
+git history proves it.
+
+Scoring reads records only, as of the same commit. A claim that reached no record
+does not count, for either configuration.
