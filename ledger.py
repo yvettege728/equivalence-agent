@@ -90,6 +90,40 @@ def check_reachable(rec):
             f"nothing could have fetched is not evidence. Write 'not verified' and say why")
 
 
+# Claims that assert a lookup. A phase with no web tools observed nothing, so a
+# record of an observation is a record of something that did not happen.
+# Added 2026-09-27: closing the URL route moved the fabrication rather than
+# stopping it. The same run then wrote "sourced from validated confluence data"
+# and "Verified distributor listings" with no link at all.
+LOOKUP = re.compile(
+    r"\b(search(ed|ing)?|look(ed)? up|listing|listings|in stock|availability|"
+    r"distributor|shelf|retailer|price[sd]?\s+(at|on)|found (on|at)|"
+    r"sourced from|confluence (search|data)|results? (show|showed|returned))\b", re.I)
+NOT_VERIFIED = re.compile(r"\bnot verified\b", re.I)
+OBSERVED = ("why", "reason", "evidence", "device")
+
+
+def check_observed(rec):
+    """Refuse an observation from a phase that could not observe.
+
+    This is a word list, which makes it the weakest check in the file. It is
+    narrow on purpose: it applies only when the wrapper granted no web tools, and
+    a phase in that state has nothing it could honestly report having seen.
+    """
+    if "web" in TOOLS:
+        return
+    for k in OBSERVED:
+        v = str(rec.get(k, ""))
+        if not v or NOT_VERIFIED.search(v):
+            continue
+        m = LOOKUP.search(v)
+        if m:
+            raise ValueError(
+                f"field {k!r} claims a lookup ({m.group(0)!r}) and this phase ran with tools "
+                f"[{','.join(sorted(TOOLS)) or 'none'}], so nothing was looked up. Say what you "
+                f"reasoned from instead, or write 'not verified' and why")
+
+
 def check_language(rec):
     """Refuse a record carrying text that is not language."""
     for k, v in rec.items():
@@ -193,6 +227,7 @@ def route(rec, label, stamp):
     check(rec)
     check_language(rec)
     check_reachable(rec)
+    check_observed(rec)
     check_repeat_ask(rec)
     g = lambda k, d="": str(rec.get(k, d)).replace("\n", " ").strip()
 
