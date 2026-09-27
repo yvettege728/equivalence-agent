@@ -3,3 +3,12 @@ LEDGER: no ledger block in the reply. Nothing written.
 LEDGER: no ledger block in the reply. Nothing written.
 SCORE: 0 prediction(s) closed this run
 QUEUE: 0 change(s)
+LEDGER WROTE  plans.jsonl: plan for soya milk, naming
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Silk Original Soymilk, 1 Quart as eval-imp-4#1
+LEDGER WROTE  predictions.jsonl: prediction on Silk Unsweetened Soymilk, Shelf-Stable, 1 Quart as eval-imp-4#2
+LEDGER: 2 written, 0 refused
+LEDGER REFUSED line 1: not JSON (Invalid \escape: line 1 column 191 (char 190)): {"record":"decision","item":"soya milk, naming","candidate":"Silk Original Soymilk, 1 Quart","verdict":"accept","reason":"Direct brand match and established con
+LEDGER: 0 written, 1 refused
+SCORE: 0 prediction(s) closed this run
+QUEUE: 0 change(s)

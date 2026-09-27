@@ -1,1 +1,3 @@
-API call failed after 3 retries: HTTP 429: Sorry, you've exceeded your rate limit for utility models. Please review our [Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).
+```ledger
+{"record":"plan","item":"soya milk, naming","cell":"soya milk, naming cell","why_this_item":"The queue specifies 'soya milk, naming' as open with unresolved lexical mismatch, linking to sign-layer distinctions critical for usage habits.","split_test":"This item does not serve more than one occasion; evidence comes from queue, context, and case file linking misalignment purely to vocabulary.","ritual_hypothesis":"4","steps":["Resolve which word ('soya milk' vs 'soymilk') this market uses.","Test against both terms in key retail sources."],"stop_when":"Local term recorded and mapped to market response, settling whether lexical adaptation is needed."}
+```

@@ -1,1 +1,4 @@
-API call failed after 3 retries: HTTP 429: Sorry, you've exceeded your rate limit for utility models. Please review our [Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).
+```ledger
+{"record":"prediction","item":"soya milk","candidate":"Silk Original Soymilk, 1 Quart","predict":"accept","confidence":0.7,"deciding_layer":"2","ritual_layer":"4","device":"confluence","why":"Confluence showed that both the term 'soya milk' and 'soymilk' accurately returned this brand. Listed on Amazon; commonly stocked under categories like 'Plant-Based Milk' in the local U.S. market. Preserves material and economic layers, supports the ritual layer usage."}
+{"record":"prediction","item":"soya milk","candidate":"Silk Unsweetened Soymilk, Shelf-Stable, 1 Quart","predict":"accept","confidence":0.65,"deciding_layer":"1","ritual_layer":"4","device":"confluence","why":"Shelf-stable option under confluence fit basic use case diversion required. Tests for pantry consumption faults only unrelated marketing challenge hurt item-match."}
+```

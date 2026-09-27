@@ -610,3 +610,14 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - this run: 0 prediction(s), 1 decision(s)
 - skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
 - COVERAGE: 1 candidate(s) reached a decision but only 0 prediction(s) were written this run. A candidate judged without a prior prediction cannot be scored.
+
+### Audit of run eval-imp-4 (2026-09-27T00:09:13Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 3 record(s) written by the wrapper, 1 refused
+- plan: worked 'soya milk, naming', stop condition stated
+- this run: 2 prediction(s), 0 decision(s)
+- skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
+- LEDGER REFUSED A RECORD: line 1: not JSON (Invalid \escape: line 1 column 191 (char 190)): {"record":"decision","item":"soya milk, naming","candidate":"Silk Original Soymilk, 1 Quart","verdict":"accept","reason":"Direct brand match and established con
+- NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
