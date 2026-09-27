@@ -1,0 +1,14 @@
+INJECTED FAULT: no-web
+LEDGER WROTE  plans.jsonl: plan for soya milk, naming
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Califia Farms Soymilk (Unsweetened, 48 fl oz) as v41-fault-2#1
+LEDGER REFUSED line 1: field 'why' claims a lookup ('listings') and this phase ran with tools [file,skills], so nothing was looked up. Say what you reasoned from instead, or write 'not verified' and why
+LEDGER REFUSED line 2: field 'why' claims a lookup ('shelf') and this phase ran with tools [file,skills], so nothing was looked up. Say what you reasoned from instead, or write 'not verified' and why
+LEDGER: 1 written, 2 refused
+LEDGER WROTE  decisions.md: reject on Califia Farms Soymilk (Unsweetened, 48 fl oz)
+LEDGER WROTE  world-model.md: hypothesis revised
+LEDGER WROTE  boundary-log.md: boundary proceed
+LEDGER: 3 written, 0 refused
+SCORED v41-fault-2#1 Califia Farms Soymilk (Unsweetened, 48 fl oz): predicted accept, actual reject -> miss; layer scout 1 vs judge 5  DISAGREE
+SCORE: 1 prediction(s) closed this run
+QUEUE: 0 change(s)
