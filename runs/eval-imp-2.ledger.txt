@@ -13,3 +13,26 @@ LEDGER REFUSED line 1: decision record has placeholder values in candidate; writ
 LEDGER: 3 written, 1 refused
 SCORE: 0 prediction(s) closed this run
 QUEUE: 0 change(s)
+LEDGER WROTE  plans.jsonl: plan for M&S pistachio cookies
+LEDGER: 1 written, 0 refused
+LEDGER WROTE  predictions.jsonl: prediction on Pistachio Autumn Cookies - American Pistachio Growers as eval-imp-2#1
+LEDGER WROTE  predictions.jsonl: prediction on Marzipan Cookies Pistachio - Anoush USA as eval-imp-2#2
+LEDGER WROTE  predictions.jsonl: prediction on Pistachio Shortbread Cookies - Amoretti as eval-imp-2#3
+LEDGER: 3 written, 0 refused
+LEDGER WROTE  decisions.md: reject on Pistachio Autumn Cookies - American Pistachio Growers
+LEDGER WROTE  decisions.md: accept on Marzipan Cookies Pistachio - Anoush USA
+LEDGER WROTE  decisions.md: reject on Pistachio Shortbread Cookies - Amoretti
+LEDGER WROTE  decisions.md: reject on Pistachio Autumn Cookies - American Pistachio Growers
+LEDGER WROTE  decisions.md: accept on Marzipan Cookies Pistachio - Anoush USA
+LEDGER WROTE  decisions.md: reject on Pistachio Shortbread Cookies - Amoretti
+LEDGER WROTE  world-model.md: hypothesis added
+LEDGER WROTE  boundary-log.md: boundary proceed
+LEDGER WROTE  shopping-list.md: action for Marzipan Cookies Pistachio - Anoush USA
+LEDGER REFUSED line 4: not JSON (Expecting property name enclosed in double quotes: line 1 column 139 (char 138)): {"record":"hypothesis","text":"Ritual trust-prioritized brands navigate focus conversion BBT-style required tokens retain layering-risk.",strategy<|vq_11496|>Ce
+LEDGER: 9 written, 1 refused
+SCORED eval-imp-2#1 Pistachio Autumn Cookies - American Pistachio Growers: predicted accept, actual reject -> miss; layer scout 1 vs judge 5  DISAGREE
+SCORED eval-imp-2#2 Marzipan Cookies Pistachio - Anoush USA: predicted accept, actual accept -> hit; layer scout 1 vs judge 5  DISAGREE
+SCORED eval-imp-2#3 Pistachio Shortbread Cookies - Amoretti: predicted accept, actual reject -> miss; layer scout 2 vs judge 4  DISAGREE
+SCORE: 3 prediction(s) closed this run
+QUEUE M&S pistachio cookies: open -> settled
+QUEUE: 1 change(s)

@@ -631,3 +631,16 @@ No verdict change from mands-2. The import (candidate 1) preserves the use ritua
 - this run: 3 prediction(s), 0 decision(s)
 - skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
 - NO BOUNDARY RECORD: the judge never said where it chose to ask rather than decide, which is the one thing it is supposed to own
+- 2026-09-27T00:28:32Z | run: eval-imp-2 | moment: 2026-09-27T00:28:32Z | went: proceed | reason: Data showed layer 5 relational dynamic could be resolved for one candidate, segmenting remaining product suitability tests to relations-hypothesis constructs future-mechanisable terms.
+
+### Audit of run eval-imp-2 (2026-09-27T00:28:32Z) by audit.py, not by any agent
+
+- verdict: **CHECK**
+- custody: no record file changed while an agent was running
+- ledger: 17 record(s) written by the wrapper, 2 refused
+- plan: worked 'M&S pistachio cookies', stop condition stated
+- this run: 3 prediction(s), 6 decision(s)
+- skill in force: plan 4.0.0 (27d9a520349d), scout 4.0.0 (27d9a520349d), judge 4.0.0 (27d9a520349d)
+- LEDGER REFUSED A RECORD: line 1: decision record has placeholder values in candidate; write what you actually found, or say 'not verified' and why
+- LEDGER REFUSED A RECORD: line 4: not JSON (Expecting property name enclosed in double quotes: line 1 column 139 (char 138)): {"record":"hypothesis","text":"Ritual trust-prioritized brands navigate focus conversion BBT-style required tokens retain layering-risk.",strategy<|vq_11496|>Ce
+- COVERAGE: 6 candidate(s) reached a decision but only 3 prediction(s) were written this run. A candidate judged without a prior prediction cannot be scored.
