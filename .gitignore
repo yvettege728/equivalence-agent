@@ -1,2 +1,4 @@
-stage/
+*.pyc
 .custody/
+__pycache__/
+stage/

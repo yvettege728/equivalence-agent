@@ -1,4 +1,4 @@
-# equivalence-agent
+# substitution-scout
 
 A substitution scout. It works out what can stand in the place of something a
 person can no longer buy after moving between cities, and it is allowed to
