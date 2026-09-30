@@ -100,6 +100,8 @@ rather than a stricter wrapper.
 | `shopping-list.md` | accepted candidates as actions, with a recheck date |
 | `cases/CASES.md` | five real substitutions with images, used as ground truth |
 | `runs/` | full transcripts, one file per agent per run |
+| `docs/failure-log.md` | fifteen recorded failures: deployment, agent, and my own instruments |
+| `docs/misbehave-experiments.md` | two attempts to make the agent misbehave (`no-web`, `prompt-injection`) |
 
 ## Five mechanisms
 
